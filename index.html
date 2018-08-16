@@ -2,14 +2,20 @@
 	<head>
 		<title>Julian M. Rice</title>
         <style>
+            .header {
+                background-color: #FFFFFF;
+                text-align: center;
+                padding: 20px;
+                font-family: Helvetica;
+            }
             .navbar {
                 overflow: hidden;
                 background-color: #333;
                 position: fixed;
                 top: 0;
                 width: 100%;
+                align-items: center;
             }
-            
             .navbar a {
                 float: left;
                 display: block;
@@ -18,23 +24,94 @@
                 padding: 14px 16px;
                 text-decoration: none;
             }
-            
             .navbar a:hover {
                 background: #ddd;
                 color: black;
             }
-            
             .main { 
                 margin-top: 30px;
             }
-            
+            .back0 {
+                background-color: #292929;
+            }
+            .back1 {
+                background-color: #606060;
+                overflow:hidden;
+            }
+            .column {
+                float: left;
+                padding: 40px 60px;
+                background-color: #FBFBFB;
+            }
+            .left {
+                width: 22%;
+            }
+            .right {
+                width: 68%;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .card {
+                background-color: #333;
+                padding: 20px;
+                margin: 20px;
+            }
+            @media screen and (max-width: 600px) {
+                .column {
+                    width: 100%;
+                }
+            }
+            .footer {
+                background-color: #F1F1F1;
+                text-align: center;
+                padding: 10px;
+            }
+            .pad {
+                padding: 10px 20px;
+            }
+            .bigUpperPadding {
+                padding: 50px 0px 0px 0px;
+            }
             .FontThin {
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
+                letter-spacing: 2.5px;
+            }
+            img {
+                display: block;
+                width: 90%;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                border: 4px black solid;
+                border-radius: 30px;
+            }
+            p {
+                font-size: 120%;
+                font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
+                color: #FBFBFB;
+                letter-spacing: 1.4px;
+                word-spacing: 1.2px;
+                text-align: justify;
+            }
+            h1 {
+                color: #000000;
+                font-family: Verdana;
+            }
+            h2 {
+                color: #FBFBFB;
+                font-family: Helvetica;
+            }
+            .center {
+                text-align: center;
+            }
         </style>
 	</head>
 
-	<body>
-		<div class = "navbar FontThin">
+	<body class = "back0">
+		<div class = "navbar FontThin pad">
             <a href = "#home">Home</a>
             <a href = "#education">Education</a>
             <a href = "#work">Work</a>
@@ -46,9 +123,22 @@
             <p>Hello!</p>
         </div>
         
-        <h1> Julian M. Rice </h1>
+        <div class = "header">
+            <h1>Goomba's Home</h1>
+        </div>
         
-        <p>Hi there! I'm Julian, a third year undergraduate student studying Linguistics and Computer Science, and Japanese, at UCLA! </p>
-        
+        <div class = "back1 row">
+            <div class = "left column card">
+                <div class = "bigUpperPadding">
+                    <img src = "profpic1.JPG">
+                </div>
+                <h2 class = "center"> That's Me! </h2>
+            </div>
+            <div class = "right column card">
+                <p><b>Hey there!</b> I'm Julian, a third year undergraduate student studying Linguistics and Computer Science, and Japanese, at UCLA! I spend a lot of my free time playing and developing video games. Well, I usually do not have much free time during the school year because of offline and online teaching and tutoring, as well as the difficulties of staying on right end of the curve for CS courses at UCLA, but free time does come here and there!</p>
+
+                <p>Some hobbies outside of studying and working all day include playing violin, basketball, and practicing my Japanese. I just finished a two month research program at Osaka University, where I had to bike for at least a half an hour to get anywhere; let's just say I love biking now!</p>
+            </div>
+        </div>
     </body>
 </html>
