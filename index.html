@@ -38,17 +38,6 @@
                 background-color: #606060;
                 overflow:hidden;
             }
-            .column {
-                float: left;
-                padding: 40px 60px;
-                background-color: #FBFBFB;
-            }
-            .left {
-                width: 22%;
-            }
-            .right {
-                width: 68%;
-            }
             .row:after {
                 content: "";
                 display: table;
@@ -58,6 +47,32 @@
                 background-color: #333;
                 padding: 20px;
                 margin: 20px;
+            }
+            .tab {
+                overflow: hidden;
+                border: 1px solid #ccc;
+                background-color: #F1F1F1;
+            }
+            .tab button {
+                background-color: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                transition: 0.3s;
+            }
+            .tab button:hover {
+                background-color: #ddd;
+            }
+            .tab button.active {
+                background-color: #ccc;
+            }
+            .tabcontent {
+                display: none;
+                padding: 6px 12px;
+                border: 1px solid #ccc;
+                border-top: none;
             }
             @media screen and (max-width: 600px) {
                 .column {
@@ -72,12 +87,18 @@
             .pad {
                 padding: 10px 20px;
             }
-            .bigUpperPadding {
-                padding: 50px 0px 0px 0px;
+            .space {
+                margin: 5% 0% 0% 0%;
+            }
+            .darkFont { 
+                color: #000000;
+            }
+            .lightFont {
+                color: #FBFBFB;
             }
             .FontThin {
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
-                letter-spacing: 2.5px;
+                letter-spacing: 1.2px;
             }
             img {
                 display: block;
@@ -89,23 +110,60 @@
                 border-radius: 30px;
             }
             p {
-                font-size: 120%;
+                font-size: 20px;
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
                 color: #FBFBFB;
-                letter-spacing: 1.4px;
-                word-spacing: 1.2px;
+                letter-spacing: 1.2px;
+                word-spacing: 1px;
                 text-align: justify;
             }
             h1 {
-                color: #000000;
+                color: #FFFFFF;
                 font-family: Verdana;
             }
             h2 {
                 color: #FBFBFB;
                 font-family: Helvetica;
             }
+            table {
+                table-layout: fixed;
+                width: 100%;
+            }
+            th, td {
+                color: #FBFBFB;
+                text-align: left;
+            }
+            th {
+                font-size: 24px;
+            }
+            td {
+                font-size: 20px;
+            }
+            button {
+                font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
+                letter-spacing: 1.1px;
+            }
             .center {
                 text-align: center;
+            }
+            #overallPadding {
+                padding: 2.5%;
+                margin: 4% 9%;
+            }
+            #home {
+                
+            }
+            #education {
+                
+            }
+            #work {
+                
+            }
+            #proj {
+                
+            }
+            #contact {
+                
             }
         </style>
 	</head>
@@ -122,23 +180,320 @@
         <div class = "main">
             <p>Hello!</p>
         </div>
-        
-        <div class = "header">
-            <h1>Goomba's Home</h1>
+        <div class = "header" id = "home">
+            <h1 class = "darkFont">Julian M. Rice</h1>
         </div>
-        
-        <div class = "back1 row">
-            <div class = "left column card">
-                <div class = "bigUpperPadding">
-                    <img src = "profpic1.JPG">
-                </div>
-                <h2 class = "center"> That's Me! </h2>
-            </div>
-            <div class = "right column card">
-                <p><b>Hey there!</b> I'm Julian, a third year undergraduate student studying Linguistics and Computer Science, and Japanese, at UCLA! I spend a lot of my free time playing and developing video games. Well, I usually do not have much free time during the school year because of offline and online teaching and tutoring, as well as the difficulties of staying on right end of the curve for CS courses at UCLA, but free time does come here and there!</p>
+        <div id = "overallPadding">
+            <div class = "back1 row">
+                <div class = "card">
+                    <h1>Welcome!</h1>
+                    <p><b>Hey there!</b> I'm Julian, a third year undergraduate student studying Linguistics and Computer Science, and Japanese, at UCLA! I spend a lot of my free time playing and developing video games. Well, I usually do not have much free time during the school year because of offline and online teaching and tutoring, as well as the difficulties of staying on right end of the curve for CS courses at UCLA, but free time does come here and there!</p>
 
-                <p>Some hobbies outside of studying and working all day include playing violin, basketball, and practicing my Japanese. I just finished a two month research program at Osaka University, where I had to bike for at least a half an hour to get anywhere; let's just say I love biking now!</p>
+                    <p>Some hobbies outside of studying and working all day include playing violin, basketball, and practicing my Japanese. I just finished a two month research program at Osaka University, where I had to bike for at least a half an hour to get anywhere; let's just say I love biking now!</p>
+                </div>
             </div>
+
+            <div id = "education" class = "back1 row FontThin lightFont space">
+                <div class = "card"> 
+                    <h1>Education</h1>
+                    <p>In-Progress</p>
+                    <p>*For General Education courses, there are three main foundations where courses fit in. [1] Arts &amp; Humanities [2] Society &amp; Culture [3] Physical &amp; Life Sciences (+Lab). These will be appropriately labeled as AH, SC, and PL in the General Education courses tab.</p>
+                    <div class = "tab"> <!-- Tab Links -->
+                        <button class = "tablinks" onclick="openClass(event,'CS')">Computer Science</button>
+                        <button class = "tablinks" onclick="openClass(event,'LING')">Linguistics</button>
+                        <button class = "tablinks" onclick="openClass(event,'JP')">Japanese</button>
+                        <button class = "tablinks" onclick="openClass(event,'GENED')">General Education</button>
+                    </div>
+                <div id = "CS" class = "tabcontent"> <!-- Tab Content -->
+                    <h3>Computer Science</h3>
+                    <table>
+                        <tr>
+                            <th style ="width: 54%">Course Name</th>
+                            <th style ="width: 23%">Label</th>
+                            <th style ="width: 23%">Term</th>
+                        </tr>
+                        <tr>
+                            <td>C++ Programming</td>
+                            <td>CS 31</td>
+                            <td>Fall 2016</td>
+                        </tr>
+                        <tr>
+                            <td>Data Structures &amp; Complexity</td>
+                            <td>CS 32</td>
+                            <td>Spring 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Architecture</td>
+                            <td>CS 33</td>
+                            <td>Fall 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Software Construction Lab</td>
+                            <td>CS 35L</td>
+                            <td>Winter 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Algorithms &amp; Complexity</td>
+                            <td>CS 180</td>
+                            <td>Spring 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Network Fundamentals (Japan)</td>
+                            <td>CS 118</td>
+                            <td>Summer 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Directed Research (Japan)</td>
+                            <td>CS 199</td>
+                            <td>Summer 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Operating System Principles</td>
+                            <td>CS 111</td>
+                            <td>Fall 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Fundamentals of AI</td>
+                            <td>CS 161</td>
+                            <td>Fall 2018</td>
+                        </tr>
+                        <tr>
+                            <td>(???) Programming Languages</td>
+                            <td>CS 131</td>
+                            <td>Winter 2019</td>
+                        </tr>
+                        <tr>
+                            <td>(???) Database Systemes</td>
+                            <td>CS 143</td>
+                            <td>Spring 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Calculus I</td>
+                            <td>MATH 31A</td>
+                            <td>Fall 2016</td>
+                        </tr>
+                        <tr>
+                            <td>Calculus II</td>
+                            <td>MATH 31B</td>
+                            <td>Winter 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Discrete Mathematics</td>
+                            <td>MATH 61</td>
+                            <td>Winter 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Principles of Logic I</td>
+                            <td>PHILOS 31</td>
+                            <td>Summer 2017</td>
+                        </tr>
+                    </table>
+</div>
+                <div id = "LING" class = "tabcontent">
+                    <h3>Linguistics</h3>
+                    <table>
+                        <tr>
+                            <th style ="width: 54%">Course Name</th>
+                            <th style ="width: 23%">Label</th>
+                            <th style ="width: 23%">Term</th>
+                        </tr>
+                        <tr>
+                            <td>Intro to Linguistic Analysis</td>
+                            <td>LING 20</td>
+                            <td>Fall 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Syntax I</td>
+                            <td>LING 120A</td>
+                            <td>Winter 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Syntax II</td>
+                            <td>LING 165B</td>
+                            <td>Spring 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Semantics I</td>
+                            <td>LING 120C</td>
+                            <td>Fall 2018</td>
+                        </tr>
+                        <tr>
+                            <td>(???) Applied Phonetics</td>
+                            <td>LING 102</td>
+                            <td>Winter 2019</td>
+                        </tr>
+                        <tr>
+                            <td>(???) Computational Linguistics</td>
+                            <td>LING 185</td>
+                            <td>Winter 2019</td>
+                        </tr>
+                        <tr>
+                            <td>(???) Phonological Structures</td>
+                            <td>LING 119A</td>
+                            <td>Spring 2019</td>
+                        </tr>
+                        <tr>
+                            <td>(???) Natural Language Processing</td>
+                            <td>LING 132</td>
+                            <td>Spring 2019</td>
+                        </tr>
+                    </table>
+</div>
+                <div id = "JP" class = "tabcontent">
+                    <h3>Japanese</h3>
+                    <table>
+                        <tr>
+                            <th style ="width: 54%">Course Name</th>
+                            <th style ="width: 23%">Label</th>
+                            <th style ="width: 23%">Term</th>
+                        </tr>
+                        <tr>
+                            <td>Intermediate Japanese II</td>
+                            <td>J5</td>
+                            <td>Winter 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Intermediate Japanese III</td>
+                            <td>J6</td>
+                            <td>Spring 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced Japanese I: Reading</td>
+                            <td>J101A</td>
+                            <td>Fall 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced Japanese II: Speaking</td>
+                            <td>J103B</td>
+                            <td>Winter 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced Japanese III: Speaking B</td>
+                            <td>J103C</td>
+                            <td>Spring 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Japanese History</td>
+                            <td>J50</td>
+                            <td>Spring 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Culture &amp; History of Okinawa</td>
+                            <td>J123</td>
+                            <td>Spring 2018</td>
+                        </tr>
+                        <tr>
+                            <td>Japanese Supernatural</td>
+                            <td>J170</td>
+                            <td>Fall 2018</td>
+                        </tr>
+                        <tr>
+                            <td>(???) Japanese Linguistics</td>
+                            <td>J124</td>
+                            <td>Winter 2018</td>
+                        </tr>
+                    </table>
+</div>
+                <div id = "GENED" class = "tabcontent">
+                    <h3>General Education</h3>
+                    <table>
+                        <tr>
+                            <th style ="width: 54%">Course Name</th>
+                            <th style ="width: 23%">Label</th>
+                            <th style ="width: 23%">Term</th>
+                        </tr>
+                        <tr>
+                            <td>[AH] Japanese History</td>
+                            <td>J50</td>
+                            <td>Spring 2017</td>
+                        </tr>
+                        <tr>
+                            <td>[AH] Intro to Linguistic Analysis</td>
+                            <td>LING 20</td>
+                            <td>Fall 2017</td>
+                        </tr>
+                        <tr>
+                            <td>[AH] Chinese Performance Arts</td>
+                            <td>WL ARTS 98TA</td>
+                            <td>Winter 2017</td>
+                        </tr>
+                        <tr>
+                            <td>[SC] Discovering Romans</td>
+                            <td>CLASSIC 20</td>
+                            <td>Winter 2017</td>
+                        </tr>
+                        <tr>
+                            <td>[SC] Classical Mythology</td>
+                            <td>CLASSIC 30</td>
+                            <td>Summer 2017</td>
+                        </tr>
+                        <tr>
+                            <td>[SC] Human Biology &amp; Society</td>
+                            <td>SOC GEN 5</td>
+                            <td>Summer 2017</td>
+                        </tr>
+                        <tr>
+                            <td>[PL] Sex, Biology, and Society</td>
+                            <td>CLUSTER M72A</td>
+                            <td>Fall 2016</td>
+                        </tr>
+                        <tr>
+                            <td>[PL] Intro to Statistics</td>
+                            <td>STATS 10</td>
+                            <td>Fall 2017</td>
+                        </tr>
+                        <tr>
+                            <td>[PL] Exploring Mars</td>
+                            <td>EPS SCI 10</td>
+                            <td>Winter 2018</td>
+                        </tr>
+                        <tr>
+                            <td>[PL] Air Pollution (+Lab)</td>
+                            <td>A&amp;O SCI 2(L)</td>
+                            <td>Summer 2017</td>
+                        </tr>
+                    </table>
+</div>
+                </div>
+            </div>
+
+            <div id = "work" class = "back1 row FontThin lightFont space">
+                <div class = "card"> 
+                    <h1>Work Experience</h1>
+                    <p>In-Progress</p>
+                </div>
+            </div>
+
+            <div id = "proj" class = "back1 row FontThin lightFont space">
+                <div class = "card"> 
+                    <h1>Projects</h1>
+                    <p>In-Progress</p>
+                </div>
+            </div>
+
+            <div id = "contact" class = "back1 row FontThin lightFont space">
+                <div class = "card"> 
+                    <h1>Contact Me</h1>
+                    <p>In-Progress</p>
+                </div>
+            </div>
+
+
+            <script>
+                function openClass(event, course) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(course).style.display = "block";
+                    event.currentTarget.className += " active";
+                }
+            </script>
         </div>
     </body>
 </html>
