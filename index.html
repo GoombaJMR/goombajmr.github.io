@@ -36,7 +36,31 @@
             }
             .back1 {
                 background-color: #606060;
-                overflow:hidden;
+                overflow: hidden;
+            }
+            .back2 { 
+                background-color: #99CC33;
+                /* overflow: hidden; */
+            }
+            .backM {
+                background-color: #FF6600;
+                /* overflow: hidden; */
+            }
+            .backC {
+                background-color: #6DCFF6;
+                /* overflow: hidden; */
+            }
+            .backV {
+                background-color: #1E90FF;
+                /* overflow: hidden; */
+            }
+            .backDarkRed {
+                background-color: #CC0953;
+                /* overflow: hidden; */
+            }
+            .backPurple {
+                background-color: #7E1B9D;
+                /* overflow: hidden; */
             }
             .row:after {
                 content: "";
@@ -60,7 +84,7 @@
                 outline: none;
                 cursor: pointer;
                 padding: 14px 16px;
-                transition: 0.3s;
+                transition: 0.5s;
             }
             .tab button:hover {
                 background-color: #ddd;
@@ -73,6 +97,10 @@
                 padding: 6px 12px;
                 border: 1px solid #ccc;
                 border-top: none;
+            }
+            button {
+                font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
+                letter-spacing: 1.1px;
             }
             @media screen and (max-width: 600px) {
                 .column {
@@ -87,6 +115,12 @@
             .pad {
                 padding: 10px 20px;
             }
+            .pad2 {
+                padding: 2% 5%;
+            }
+            .bold {
+                font-weight: bold;
+            }
             .space {
                 margin: 5% 0% 0% 0%;
             }
@@ -99,6 +133,9 @@
             .FontThin {
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
                 letter-spacing: 1.2px;
+            }
+            .FontThinner {
+                font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
             }
             img {
                 display: block;
@@ -113,7 +150,7 @@
                 font-size: 20px;
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
                 color: #FBFBFB;
-                letter-spacing: 1.2px;
+                letter-spacing: 1px;
                 word-spacing: 1px;
                 text-align: justify;
             }
@@ -138,10 +175,6 @@
             }
             td {
                 font-size: 20px;
-            }
-            button {
-                font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
-                letter-spacing: 1.1px;
             }
             .center {
                 text-align: center;
@@ -184,7 +217,7 @@
             <h1 class = "darkFont">Julian M. Rice</h1>
         </div>
         <div id = "overallPadding">
-            <div class = "back1 row">
+            <div class = "back2 row">
                 <div class = "card">
                     <h1>Welcome!</h1>
                     <p><b>Hey there!</b> I'm Julian, a third year undergraduate student studying Linguistics and Computer Science, and Japanese, at UCLA! I spend a lot of my free time playing and developing video games. Well, I usually do not have much free time during the school year because of offline and online teaching and tutoring, as well as the difficulties of staying on right end of the curve for CS courses at UCLA, but free time does come here and there!</p>
@@ -193,7 +226,7 @@
                 </div>
             </div>
 
-            <div id = "education" class = "back1 row FontThin lightFont space">
+            <div id = "education" class = "backM row FontThin lightFont space">
                 <div class = "card"> 
                     <h1>Education</h1>
                     <p>In-Progress</p>
@@ -338,7 +371,7 @@
                             <td>Spring 2019</td>
                         </tr>
                     </table>
-</div>
+                    </div>
                 <div id = "JP" class = "tabcontent">
                     <h3>Japanese</h3>
                     <table>
@@ -393,7 +426,7 @@
                             <td>Winter 2018</td>
                         </tr>
                     </table>
-</div>
+                    </div>
                 <div id = "GENED" class = "tabcontent">
                     <h3>General Education</h3>
                     <table>
@@ -453,25 +486,38 @@
                             <td>Summer 2017</td>
                         </tr>
                     </table>
-</div>
+                    </div>
                 </div>
             </div>
 
-            <div id = "work" class = "back1 row FontThin lightFont space">
+            <div id = "work" class = "backDarkRed row FontThin lightFont space">
                 <div class = "card"> 
                     <h1>Work Experience</h1>
                     <p>In-Progress</p>
+                    <div class = "back2 pad2">
+                        <p class = "darkFont bold">SuperCoding</p>
+                        <p>September 2017 - PRESENT</p>
+                    </div>
+                    <div class = "backM pad2">
+                        <p class = "darkFont bold">Microsoft</p>
+                    </div>
+                    <div class = "backC pad2">
+                        <p class = "darkFont bold">The Coding School</p>
+                    </div>
+                    <div class = "backV pad2">
+                        <p class = "darkFont bold">Varsity Tutors</p>
+                    </div>
                 </div>
             </div>
 
-            <div id = "proj" class = "back1 row FontThin lightFont space">
+            <div id = "proj" class = "backPurple row FontThin lightFont space">
                 <div class = "card"> 
                     <h1>Projects</h1>
                     <p>In-Progress</p>
                 </div>
             </div>
 
-            <div id = "contact" class = "back1 row FontThin lightFont space">
+            <div id = "contact" class = "backV row FontThin lightFont space">
                 <div class = "card"> 
                     <h1>Contact Me</h1>
                     <p>In-Progress</p>
