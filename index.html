@@ -15,6 +15,7 @@
                 top: 0;
                 width: 100%;
                 align-items: center;
+                z-index: 1;
             }
             .navbar a {
                 float: left;
@@ -74,6 +75,7 @@
                 background-color: #333;
                 padding: 20px;
                 margin: 20px;
+                overflow: hidden;
             }
             .tab {
                 overflow: hidden;
@@ -163,7 +165,6 @@
                 color: #FBFBFB;
                 letter-spacing: 1px;
                 word-spacing: 1px;
-                text-align: justify;
             }
             h1 {
                 color: #FFFFFF;
@@ -201,8 +202,11 @@
             #home {
                 
             }
+            .justify {
+                text-align: justify;
+            }
             #education {
-                
+                text-align: justify;
             }
             #work {
                 
@@ -233,8 +237,67 @@
             p.collapse {
                 color: black;
             }
+            * {box-sizing: border-box;}
+            
+            .skill-container {
+                width: 100%;
+                background-color: #222;
+            }
+            .skills {
+                text-align: right;
+                padding: 10px;
+                font-size: 16px;
+                color: antiquewhite;
+            }
+            .cpp {width: 85%; background-color: #004589;}
+            .python {width: 75%; background-color: #2F7CC7;}
+            .c{width: 70%; background-color: darkblue;}
+            .html {width: 70%; background-color: orangered;}
+            .css {width: 70%; background-color: cornflowerblue;}
+            .js {width: 60%; background-color: #E78C00;}
+            .unix {width: 60%; background-color: darkgreen;}
+            .bash {width: 55%; background-color: darkmagenta;}
+            .php {width: 50%; background-color: deeppink;}
+            .react {width: 40%; background-color: darkcyan; }
             #proj {
                 
+            }
+            .flip {
+                background-color: transparent;
+                width: 50%;
+                height: 400px;
+                perspective: 1000px;
+                float: left;
+            }
+            .flip-inside {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 1s;
+                transform-style: preserve-3d;
+            }
+            .flip:active .flip-inside {
+                transform: rotateX(-180deg);
+            }
+            .flip-front, .flip-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+            }
+            .flip-front {
+                background-color: #444;
+                color: black;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+            .flip-back {
+                color: white;
+                background-color: #7E1B9D;
+                transform: rotateX(-180deg);
             }
             #contact {
                 
@@ -259,7 +322,7 @@
         </div>
         <div id = "overallPadding"> <!-- WELCOME -->
             <div class = "back2 row">
-                <div class = "card">
+                <div class = "card justify">
                     <h1>Welcome!</h1>
                     <p><b>Hey there!</b> I'm Julian, a third year undergraduate student studying Linguistics and Computer Science, and Japanese, at UCLA! I spend a lot of my free time playing and developing video games. Well, I usually do not have much free time during the school year because of offline and online teaching and tutoring, as well as the difficulties of staying on right end of the curve for CS courses at UCLA, but free time does come here and there!</p>
 
@@ -559,6 +622,51 @@
                             <p class="collapse">August 2017 - April 2018</p>
                         </div>
                     </div> <!-- Varsity Tutors -->
+                    <div style="padding: 10px 0px;"></div>
+                    <div>
+                        <button class="collapsible" style="background-color:#F2F2F2; text-align: center; font-style: italic;" onMouseOver="this.style.background ='#F9FAF9'" onMouseOut="this.style.background ='#F2F2F2'">Programming Language &amp; Skill Proficiency</button>
+                        <div class ="collapsible-content" style="background-color:#FFFFFF">
+                            <div style="padding-top: 10px;"></div>
+                            <div class="skill-container">
+                                <div class="skills cpp"><div style="text-align: left; float:left;">C++</div>85%</div>
+                            </div>
+                            <div class="skill-container">
+                                <div class="skills python"><div style="text-align: left; float:left;">Python</div>75%</div>
+                            </div>
+                            <div class="skill-container">
+                                <div class="skills c"><div style="text-align: left; float:left;">C, C#</div>70%</div>
+                            </div>
+                            <div class="skill-container">
+                                <div class="skills html"><div style="text-align: left; float:left;">HTML</div>70%</div>
+                            </div>
+                            <div class="skill-container">
+                                <div class="skills css"><div style="text-align: left; float:left;">CSS</div>70%</div>
+                            </div>
+                            <div class="skill-container">
+                                <div class="skills js"><div style="text-align: left; float:left;">JavaScript</div>60%</div>
+                            </div>
+                            <div class="skill-container">
+                                <div class="skills unix"><div style="text-align: left; float:left;">UNIX</div>60%</div>
+                            </div>
+                            <div class="skill-container">
+                                <div class="skills bash"><div style="text-align: left; float:left;">Bash</div>55%</div>
+                            </div>
+                            <div class="skill-container">
+                                <div class="skills php"><div style="text-align: left; float:left;">PHP</div>50%</div>
+                            </div>
+                            <div class="skill-container">
+                                <div class="skills react"><div style="text-align: left; float:left;">React Native</div>40%</div>
+                            </div>
+                            <div style="padding-bottom: 15px;"></div>
+                            <p class="collapse">Languages that I have studied but have not used in practice (yet)</p>
+                            <ul>
+                                <li style="color:darkred; font-size: 17px;">Java (25%)</li>
+                                <li style="color:darkred; font-size: 17px;">Lua (20%)</li>
+                                <li style="color:darkred; font-size: 17px;">MySQL (10%)</li>
+                                <li style="color:darkred; font-size: 17px;">Lisp (10%)* For AI course in Fall 2018</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -566,6 +674,70 @@
                 <div class = "card"> 
                     <h1>Projects</h1>
                     <p>In-Progress</p>
+                    <div class = "flip"> 
+                        <div class="flip-inside">
+                            <div class="flip-front">
+                                <p style="background-color: black; padding: 14px; font-style: italic;">iOS Application (TBA)</p>
+                            </div>
+                            <div class ="flip-back pad">
+                                <p>More details to be disclosed when the time comes. Currently working with HTML, CSS, Javascipt/JSX, React Native, a parse server, node.js, and more.</p>
+                            </div>
+                        </div>
+                    </div> <!-- iOS Application -->
+                    <div class = "flip"> 
+                        <div class="flip-inside">
+                            <div class="flip-front">
+                                <p style="background-color: black; padding: 14px; font-style: italic;">GameMaker Project (TBA)</p>
+                            </div>
+                            <div class ="flip-back pad">
+                                <p>More details to be disclosed when the time comes. Currently using GameMaker Studio 2 and C++ (GML) to develop a action platform game with a unique twist (hopefully).</p>
+                            </div>
+                        </div>
+                    </div> <!-- GameMaker 2 Game -->
+                    <div class = "flip"> 
+                        <div class="flip-inside">
+                            <div class="flip-front" style="background-image: url(rr-m.png)">
+                                <p style="background-color: black; padding: 14px; font-style: italic;">An Evaluation of the Rotor Router Mechanism</p>
+                            </div>
+                            <div class ="flip-back pad">
+                                <p style="font-size: 16px;">During my 2 month research program in Osaka University's Graduate School of Information Sciences and Technology, I researched the rotor router mechanism and developed a simulator that analyzes the average stabilization period into a neverending Euler cycle, and wrote a paper that analyzes the value and importance of what a given stabilization period is.
+                                
+                                Feel free to read some of the more technical details below</p>
+                                
+                                <a href="rotor.html" class="in-box">Read More</a>
+                            </div>
+                        </div>
+                    </div> <!-- Rotor Router -->
+                    <div class = "flip"> 
+                        <div class="flip-inside">
+                            <div class="flip-front" style="background-image: url(hfcyg.png)">
+                                <p style="background-color: black; padding: 14px; font-style: italic;">How Far Can You Go?</p>
+                            </div>
+                            <div class ="flip-back">
+                                <p>Back</p>
+                            </div>
+                        </div>
+                    </div> <!-- HFCYG? -->
+                    <div class = "flip"> 
+                        <div class="flip-inside">
+                            <div class="flip-front">
+                                <p style="background-color: black; padding: 14px; font-style: italic;">Trials of Rice (TBA)</p>
+                            </div>
+                            <div class ="flip-back">
+                                <p>Back</p>
+                            </div>
+                        </div>
+                    </div> <!-- Trials of Rice -->
+                    <div class = "flip"> 
+                        <div class="flip-inside">
+                            <div class="flip-front">
+                                <p style="background-color: black; padding: 14px; font-style: italic;">Bandcamp</p>
+                            </div>
+                            <div class ="flip-back">
+                                <p>Back</p>
+                            </div>
+                        </div>
+                    </div> <!-- Bandcamp -->
                 </div>
             </div>
 
