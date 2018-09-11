@@ -46,7 +46,7 @@
                 /* overflow: hidden; */
             }
             .backM {
-                background-color: #FF6600;
+                background-color: #FF6600; !important;
                 /* overflow: hidden; */
             }
             .backC {
@@ -207,16 +207,31 @@
             #work {
                 
             }
-            .dropdownButtonSuperCoding {
+            .collapsible {
                 background-color: #99CC33;
                 color: black;
-                padding: 16px;
-                font-size: 20px;
-                border: none;
+                font-weight: bold;
                 cursor: pointer;
+                padding: 25px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 20px;
             }
-            .dropdownButtonSuperCoding:hover, .dropdownButtonSuperCoding:focus {
+            .collapsible:hover {
+                background-color: #A6DB3B;
+            }
+            .collapsible-content {
+                padding: 0 25px;
                 background-color: #B4DD61;
+                /*Allowing animations*/
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-out;
+            }
+            p.collapse {
+                color: black;
             }
             #proj {
                 
@@ -520,19 +535,30 @@
                 <div class = "card"> 
                     <h1>Work Experience</h1>
                     <p>In-Progress</p>
-                    <div class = "back2 pad2">
-                        <p>SuperCoding</p>
-                        <p>Text about SuperCoding</p>
+                    <div> 
+                        <button class="collapsible">SuperCoding</button>
+                        <div class ="collapsible-content">
+                            <p class="collapse">September 2017 - Present</p>
                         </div>
-                    <div class = "backM pad2">
-                        <p class = "darkFont bold">Microsoft</p>
-                    </div>
-                    <div class = "backC pad2">
-                        <p class = "darkFont bold">The Coding School</p>
-                    </div>
-                    <div class = "backV pad2">
-                        <p class = "darkFont bold">Varsity Tutors</p>
-                    </div>
+                    </div> <!-- SuperCoding -->
+                    <div>
+                        <button class="collapsible" style="background-color:#FF6600" onMouseOver="this.style.background ='#FF812D'" onMouseOut="this.style.background ='#FF6600'">Microsoft</button>
+                        <div class ="collapsible-content" style="background-color:#FF9249">
+                            <p class="collapse">September 2017 - May 2018</p>
+                        </div>
+                    </div> <!-- Microsoft -->
+                    <div>
+                        <button class="collapsible" style="background-color:#6DCFF6" onMouseOver="this.style.background ='#8CDAF9'" onMouseOut="this.style.background ='#6DCFF6'">The Coding School</button>
+                        <div class ="collapsible-content" style="background-color:#9AE2FF">
+                            <p class="collapse">September - December (2017/2018)</p>
+                        </div>
+                    </div> <!-- The Coding School -->
+                    <div>
+                        <button class="collapsible" style="background-color:#1E90FF" onMouseOver="this.style.background ='#379DFF'" onMouseOut="this.style.background ='#1E90FF'">Varsity Tutors</button>
+                        <div class ="collapsible-content" style="background-color:#62B2FF">
+                            <p class="collapse">August 2017 - April 2018</p>
+                        </div>
+                    </div> <!-- Varsity Tutors -->
                 </div>
             </div>
 
@@ -565,8 +591,18 @@
                     document.getElementById(course).style.display = "block";
                     event.currentTarget.className += " active";
                 }
-                function getDropdown() {
-                    document.getElementById("myDropdown").classList.toggle("show");
+                var coll=document.getElementsByClassName("collapsible");
+                var i;
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        }
+                    });
                 }
             </script>
         </div>
