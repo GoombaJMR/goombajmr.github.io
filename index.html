@@ -150,15 +150,6 @@
             .FontThinner {
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
             }
-            img {
-                display: block;
-                width: 90%;
-                height: auto;
-                margin-left: auto;
-                margin-right: auto;
-                border: 4px black solid;
-                border-radius: 30px;
-            }
             p {
                 font-size: 20px;
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
@@ -208,8 +199,22 @@
             #education {
                 text-align: justify;
             }
+            img {
+                vertical-align: middle;
+            }
             #work {
                 
+            }
+            li {
+                color: black;
+                font-size: 18px;
+            }
+            ul {
+                list-style: none;
+            }
+            ul li:before {
+                content: '+';
+                padding: 10px;
             }
             .collapsible {
                 background-color: #99CC33;
@@ -239,6 +244,63 @@
             }
             * {box-sizing: border-box;}
             
+            .image-gallery {
+                position: relative;
+            }
+            .slides1 {
+                display: none;
+            }
+            .cursor {
+                cursor: pointer;
+            }
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -50px;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8); /*20% transparent*/
+            }
+            .numbertext {
+                color: #F2F2F2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+            .caption-container {
+                text-align: center;
+                background-color: #222;
+                padding: 2px 16px;
+                color: white;
+            }
+            .sde {
+                max-width: 768px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 22px;
+            }
+            .demo {
+                opacity: 0.6;
+            }
+            
+            .active, .demo:hover {
+                opacity: 1;
+            }
             .skill-container {
                 width: 100%;
                 background-color: #222;
@@ -259,6 +321,21 @@
             .bash {width: 55%; background-color: darkmagenta;}
             .php {width: 50%; background-color: deeppink;}
             .react {width: 40%; background-color: darkcyan; }
+            
+            a.site-button {
+                background-color: #F3F3F3;
+                color: black;
+                padding: 15px 25px;
+                border-bottom: 4px solid white;
+                font-size: 16px;
+                margin: 0;
+                text-decoration: none;
+                font-weight: 550;
+            }
+            a:link.site-button { color: white; }
+            a:visited.site-button { color: crimson; }
+            a:hover.site-button { background-color: #F6F6F6; }
+            a:active.site-button { background-color: #F0F0F0; }
             #proj {
                 
             }
@@ -277,7 +354,7 @@
                 transition: transform 1s;
                 transform-style: preserve-3d;
             }
-            .flip:active .flip-inside {
+            .flip:hover .flip-inside {
                 transform: rotateX(-180deg);
             }
             .flip-front, .flip-back {
@@ -598,26 +675,75 @@
                 <div class = "card"> 
                     <h1>Work Experience</h1>
                     <p>In-Progress</p>
-                    <div> 
-                        <button class="collapsible">SuperCoding</button>
+                    <div>
+                        <button class="collapsible" style="background-color:#F6E112" onMouseOver="this.style.background ='#F4E65A'" onMouseOut="this.style.background ='#F6E112'">TBA <span style="font-weight: normal;">- Full Stack Developer</span></button>
+                        <div class ="collapsible-content" style="background-color:#FFF380">
+                            <p class="collapse">August 2018 - Present</p>
+                            <p class="collapse">Details to be announced later. This is related to Project 1: iOS Application</p>
+                        </div>
+                    </div> <!-- FF -->
+                    <div>
+                        <button class="collapsible">SuperCoding <span style="font-weight: normal;">- Technology Instructor, Partner</span></button>
                         <div class ="collapsible-content">
                             <p class="collapse">September 2017 - Present</p>
+                            <p class="collapse">I work along two other entrepreneurs, assisting with website &amp; curricula development, marketing, and increasing social media presence.</p>
+                            <p class="collapse">I have planned and developed the entire curriculum for the following courses: </p>
+                            <ul>
+                                <li>Practical Coding (HTML/CSS, C++)</li>
+                                <li>Practical Coding 2 (Python 2.7)</li>
+                                <li>Practical Coding 2 Python Projects (Turtle/Tkinter)</li>
+                                <li>2D Game Development 1 (Top-Down Action)</li>
+                                <li>2D Game Development 2 (Platformer)</li>
+                                <li>2D Game Development 3 (Action-Platformer)</li>
+                            </ul>
+                            <p class="collapse">You can check out the website  and the courses we offer below</p>
+                            <div class="pad"></div>
+                            <div style="text-align: center;">
+                                <a href="https://www.supercoding.io" class="site-button">Visit SuperCoding!</a>
+                            </div>
+                            <div class="pad"></div>
+                            <p class="collapse">I instruct weekly online and offline courses for all levels of 2D Game Development, creating and helping elementary and middle school students create video games using GameMaker Studio 2 (C++).</p>
+                            <p class="collapse">Furthermore, I also instruct weekly online and offline courses for all levels of Practical Coding, programming and helping high school students write programs and design websites using C++, Python (including Tkinter and Turtle), and HTML &amp; CSS</p>
+                            
+                            <div class="image-gallery">
+                                <div class="slides1">
+                                    <img src="sc-1.jpg" class="sde">
+                                </div>
+                                <div class="slides1">
+                                    <img src="sc-2.jpg" class="sde">
+                                </div>
+                                <div class="slides1">
+                                    <img src="sc-3.jpg" class="sde">
+                                </div>
+                                <div class="slides1">
+                                    <img src="sc-4.jpg" class="sde">
+                                </div>
+                                <div class="slides1">
+                                    <img src="sc-5.jpg" class="sde">
+                                </div>
+                                <!-- Next/Prev -->
+                                <a class="prev sde" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next sde" onclick="plusSlides(1)">&#10095;</a>
+                                <div class="caption-container">
+                                    <p id="caption"></p>
+                                </div>
+                            </div>
                         </div>
                     </div> <!-- SuperCoding -->
                     <div>
-                        <button class="collapsible" style="background-color:#FF6600" onMouseOver="this.style.background ='#FF812D'" onMouseOut="this.style.background ='#FF6600'">Microsoft</button>
+                        <button class="collapsible" style="background-color:#FF6600" onMouseOver="this.style.background ='#FF812D'" onMouseOut="this.style.background ='#FF6600'">Microsoft <span style="font-weight: normal;">- Campus Representative</span></button>
                         <div class ="collapsible-content" style="background-color:#FF9249">
                             <p class="collapse">September 2017 - May 2018</p>
                         </div>
                     </div> <!-- Microsoft -->
                     <div>
-                        <button class="collapsible" style="background-color:#6DCFF6" onMouseOver="this.style.background ='#8CDAF9'" onMouseOut="this.style.background ='#6DCFF6'">The Coding School</button>
+                        <button class="collapsible" style="background-color:#6DCFF6" onMouseOver="this.style.background ='#8CDAF9'" onMouseOut="this.style.background ='#6DCFF6'">The Coding School <span style="font-weight: normal;">- Technology Instructor</span></button>
                         <div class ="collapsible-content" style="background-color:#9AE2FF">
                             <p class="collapse">September - December (2017/2018)</p>
                         </div>
                     </div> <!-- The Coding School -->
                     <div>
-                        <button class="collapsible" style="background-color:#1E90FF" onMouseOver="this.style.background ='#379DFF'" onMouseOut="this.style.background ='#1E90FF'">Varsity Tutors</button>
+                        <button class="collapsible" style="background-color:#1E90FF" onMouseOver="this.style.background ='#379DFF'" onMouseOut="this.style.background ='#1E90FF'">Varsity Tutors <span style="font-weight: normal;">- Private Tutor</span></button>
                         <div class ="collapsible-content" style="background-color:#62B2FF">
                             <p class="collapse">August 2017 - April 2018</p>
                         </div>
@@ -666,7 +792,7 @@
                                 <li style="color:darkred; font-size: 17px;">Lisp (10%)* For AI course in Fall 2018</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> <!-- Programming Language & Skill Proficiency -->
                 </div>
             </div>
 
@@ -775,6 +901,33 @@
                             content.style.maxHeight = content.scrollHeight + "px";
                         }
                     });
+                }
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+                function showSlides(n) {
+                    var i;
+                    var slides= document.getElementsByClassName("slides1");
+                    var dots= document.getElementsByClassName("demo");
+                    var captionText= document.getElementById("caption");
+                    if (n > slides.length)
+                        slideIndex = 1;
+                    if (n < 1)
+                        slideIndex = slides.length;
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                    captionText.innerHTML = dots[slideIndex-1].alt;
                 }
             </script>
         </div>
