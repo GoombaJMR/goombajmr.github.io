@@ -3,18 +3,46 @@
 		<title>Julian M. Rice</title>
         <style>
             .header {
-                background-color: #FFFFFF;
+                /*background-color: #FFFFFF;*/
+                background-image: url(images/shib.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
                 text-align: center;
-                padding: 20px;
                 font-family: Helvetica;
+
+            }
+            .headFont {
+                visibility: visible;
+                opacity: 1;
+                transition: opacity 2s linear;
+                font-size: 60px;
+            }
+            .headFont:hover {
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0s 2s, opacity 0.5s linear;
+            }
+            .trans {
+                background-color: rgb(57, 4, 81, 0.4);
+            }
+            .trans:hover {
+                background-color: rgb(96, 7, 135, 0.2);
+            }
+            .trans p:hover {
+                font-size: 30px;
+            }
+            .transPad {
+                padding: 10%;
             }
             .navbar {
                 overflow: hidden;
-                background-color: #333;
+                background-color: black;
                 position: fixed;
                 top: 0;
                 width: 100%;
-                align-items: center;
+                display: flex;
+                justify-content: center;
                 z-index: 1;
             }
             .navbar a {
@@ -22,7 +50,8 @@
                 display: block;
                 color: #f2f2f2;
                 text-align: center;
-                padding: 14px 16px;
+                padding: 14px 20px;
+                margin: 0px 20px;
                 text-decoration: none;
             }
             .navbar a:hover {
@@ -36,14 +65,14 @@
                 margin-top: 30px;
             }
             .back0 {
-                background-color: #292929;
+                background-color: black;
             }
             .back1 {
                 background-color: #606060;
                 overflow: hidden;
             }
             .back2 { 
-                background-color: #99CC33;
+                background-color: #7AA328;
                 /* overflow: hidden; */
             }
             .backM {
@@ -55,7 +84,7 @@
                 /* overflow: hidden; */
             }
             .backV {
-                background-color: #1E90FF;
+                background-color: #57A5C4;
                 /* overflow: hidden; */
             }
             .backDarkRed {
@@ -72,8 +101,8 @@
                 clear: both;
             }
             .card {
-                background-color: #333;
-                padding: 25px;
+                background-color: #222222;
+                padding: 3% 7%;
                 margin: 20px;
                 overflow: hidden;
             }
@@ -82,6 +111,10 @@
                 border: 4px solid #FF6600;
                 background-color: #424;
                 text-align: center;
+                margin-left: -5%;
+                margin-right: -5%;
+                display: flex;
+                justify-content: center;
             }
             .tab button {
                 background-color: inherit;
@@ -90,10 +123,10 @@
                 border: none;
                 outline: none;
                 cursor: pointer;
-                padding: 12px 12px;
+                padding: 15px 10px;
                 font-weight: bold;
                 font-style: italic;
-                font-size: 16px;
+                font-size: 14px;
                 transition: 0.5s;
             }
             .tab button:hover {
@@ -110,6 +143,7 @@
                 padding: 10px 10px;
                 border: 4px solid #FF6600;
                 border-top: none;
+                margin: 0% -5%;
             }
             button {
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
@@ -137,6 +171,9 @@
             .space {
                 margin: 5% 0% 0% 0%;
             }
+            .minispace {
+                margin: 5% 0% 0% 0%;
+            }
             .darkFont { 
                 color: #000000;
             }
@@ -151,11 +188,14 @@
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
             }
             p {
-                font-size: 20px;
+                font-size: 21px;
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
                 color: #FBFBFB;
                 letter-spacing: 1px;
                 word-spacing: 1px;
+            }
+            .paragraph p {
+                line-height: 45px;
             }
             h1 {
                 color: #FFFFFF;
@@ -193,8 +233,23 @@
             #home {
                 
             }
+            .profImg {
+                border-radius: 100%;
+                width: 220px;
+                perspective: 1000px;
+                background-color: transparent;
+                transition: transform 1.33s;
+                transition-timing-function: ease-out;
+                transform-style: preserve-3d;
+            }
+            .profImg:hover {
+                transform: rotateY(360deg);
+            }
             .justify {
                 text-align: justify;
+            }
+            .center {
+                text-align: center;
             }
             #education {
                 text-align: justify;
@@ -303,7 +358,14 @@
             }
             .skill-container {
                 width: 100%;
-                background-color: #222;
+                background-color: black;
+            }
+            .cumGPAbar {
+                border: 1px solid #FFC125; 
+                max-width: 300px; 
+                display: block; 
+                margin-left: auto; 
+                margin-right: auto;
             }
             .skills {
                 text-align: right;
@@ -319,6 +381,7 @@
                 border: 2px solid black;
                 border-radius: 30px;
             }
+            .gpa {width: 84.5%; background-color: royalblue;}
             .cpp {width: 85%; background-color: #004589;}
             .python {width: 75%; background-color: #2F7CC7;}
             .c{width: 70%; background-color: darkblue;}
@@ -392,34 +455,47 @@
 
 	<body class = "back0">
 		<div class = "navbar FontThin pad">
-            <a href = "#home" onMouseOver="this.style.background ='#99CC33'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#333'; this.style.color = '#F2F2F2'">Home</a>
-            <a href = "#education" onMouseOver="this.style.background ='#FF6600'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#333'">Education</a>
-            <a href = "#work" onMouseOver="this.style.background ='#CC0953'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#333'; this.style.color = '#F2F2F2'">Work</a>
-            <a href = "#proj" onMouseOver="this.style.background ='#7E1B9D'; this.style.color = '#FFFFFF'" onMouseOut="this.style.background='#333'; this.style.color = '#F2F2F2'">Projects</a>
-            <a href = "#contact" onMouseOver="this.style.background ='#6DCFF6'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#333'; this.style.color = '#F2F2F2'">Contact</a>
+            <a href = "#home" onMouseOver="this.style.background ='#7AA328'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000'; this.style.color = '#F2F2F2'">Home</a>
+            <a href = "#education" onMouseOver="this.style.background ='#FF6600'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000'">Education</a>
+            <a href = "#work" onMouseOver="this.style.background ='#CC0953'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000'; this.style.color = '#F2F2F2'">Work</a>
+            <a href = "#proj" onMouseOver="this.style.background ='#7E1B9D'; this.style.color = '#FFFFFF'" onMouseOut="this.style.background='#000'; this.style.color = '#F2F2F2'">Projects</a>
+            <a href = "#contact" onMouseOver="this.style.background ='#57A5C4'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000'; this.style.color = '#F2F2F2'">Contact</a>
         </div>
         
         <div class = "main">
             <p style = "color: white">Hello!</p>
         </div>
         <div class = "header" id = "home">
-            <h1 class = "darkFont">Julian M. Rice</h1>
+            <div class = "trans transPad">
+                <h1 class = "lightFont headFont">Julian M. Rice</h1>
+            </div>
         </div>
         <div id = "overallPadding"> <!-- WELCOME -->
             <div class = "back2 row">
-                <div class = "card justify">
-                    <h1>Welcome!</h1>
+                <div class = "card justify paragraph">
+                    <h1 class="center">Welcome!</h1>
+                    <img src="images/profpic1.JPG" class="profImg trans" style="margin-left: auto; margin-right: auto; display: block;">
                     <p><b>Hey there!</b> I'm Julian, a third year undergraduate student studying Linguistics and Computer Science, and Japanese, at UCLA! I spend a lot of my free time playing and developing video games. Well, I usually do not have much free time during the school year because of offline and online teaching and tutoring, as well as the difficulties of staying on right end of the curve for CS courses at UCLA, but free time does come here and there!</p>
 
                     <p>Some hobbies outside of studying and working all day include playing violin, basketball, and practicing my Japanese. I just finished a two month research program at Osaka University, where I had to bike for at least a half an hour to get anywhere; let's just say I love biking now!</p>
                 </div>
             </div>
-
-            <div id = "education" class = "backM row FontThin lightFont space">
+            
+            <div id = "education" style="padding-top: 70px;">
+                <div class = "backM row FontThin lightFont space">
                 <div class = "card"> 
-                    <h1>Education</h1>
-                    <p>In-Progress</p>
-                    <p>*For General Education courses, there are three main foundations where courses fit in. [1] Arts &amp; Humanities [2] Society &amp; Culture [3] Physical &amp; Life Sciences (+Lab). These will be appropriately labeled as AH, SC, and PL in the General Education courses tab.</p>
+                    <div class = "paragraph">
+                        <h1 class="center">Education</h1>
+                        <img src="images/bruins.png" style="margin-left: auto; margin-right: auto; display: block; width: 220px; padding-bottom: 30px">
+                        
+                        <!-- Cum GPA Bar -->
+                        <div class="skill-container cumGPABar">
+                            <div class="skills gpa" style="border-right: 1px solid #FFC125;"><div style="text-align: left; float:left;">GPA</div><span style="color: #FFC125">3.38 / 4.00</span></div>
+                        </div>
+                        
+                        <p>In-Progress</p>
+                        <p>*For General Education courses, there are three main foundations where courses fit in. [1] Arts &amp; Humanities [2] Society &amp; Culture [3] Physical &amp; Life Sciences (+Lab). These will be appropriately labeled as AH, SC, and PL in the General Education courses tab.</p>
+                    </div>
                     <div class = "tab"> <!-- Tab Links -->
                         <button class = "tablinks" onclick="openClass(event,'CS')">Computer Science</button>
                         <button class = "tablinks" onclick="openClass(event,'LING')">Linguistics</button>
@@ -427,7 +503,7 @@
                         <button class = "tablinks" onclick="openClass(event,'GENED')">General Education</button>
                     </div>
                 <div id = "CS" class = "tabcontent"> <!-- Tab Content -->
-                    <h3>Computer Science</h3>
+                    <h3 class="center">Computer Science</h3>
                     <table>
                         <tr>
                             <th style ="width: 54%">Course Name</th>
@@ -512,7 +588,7 @@
                     </table>
 </div>
                 <div id = "LING" class = "tabcontent">
-                    <h3>Linguistics</h3>
+                    <h3 class="center">Linguistics</h3>
                     <table>
                         <tr>
                             <th style ="width: 54%">Course Name</th>
@@ -562,7 +638,7 @@
                     </table>
                     </div>
                 <div id = "JP" class = "tabcontent">
-                    <h3>Japanese</h3>
+                    <h3 class="center">Japanese</h3>
                     <table>
                         <tr>
                             <th style ="width: 54%">Course Name</th>
@@ -617,7 +693,7 @@
                     </table>
                     </div>
                 <div id = "GENED" class = "tabcontent">
-                    <h3>General Education</h3>
+                    <h3 class="center">General Education</h3>
                     <table>
                         <tr>
                             <th style ="width: 54%">Course Name</th>
@@ -678,11 +754,15 @@
                     </div>
                 </div>
             </div>
-
-            <div id = "work" class = "backDarkRed row FontThin lightFont space">
+            </div>
+            
+            <div id = "work" style="padding-top: 70px;">
+                <div class = "backDarkRed row FontThin lightFont space">
                 <div class = "card"> 
-                    <h1>Work Experience</h1>
-                    <p>In-Progress</p>
+                    <div class="paragraph">
+                        <h1 class="center">Work Experience</h1>
+                        <p>In-Progress</p>
+                    </div>
                     <div>
                         <button class="collapsible" style="background-color:#F6E112" onMouseOver="this.style.background ='#F4E65A'" onMouseOut="this.style.background ='#F6E112'">TBA <span style="font-weight: normal;">- Full Stack Developer</span></button>
                         <div class ="collapsible-content" style="background-color:#FFF380">
@@ -809,11 +889,15 @@
                     </div> <!-- Programming Language & Skill Proficiency -->
                 </div>
             </div>
-
-            <div id = "proj" class = "backPurple row FontThin lightFont space">
+            </div>
+                
+            <div id = "proj" style="padding-top: 70px;">
+                <div class = "backPurple row FontThin lightFont space">
                 <div class = "card"> 
-                    <h1>Projects</h1>
-                    <p>In-Progress</p>
+                    <div class="paragraph">
+                        <h1 class="center">Projects</h1>
+                        <p>In-Progress</p>
+                    </div>
                     <div class = "flip"> 
                         <div class="flip-inside">
                             <div class="flip-front">
@@ -860,7 +944,17 @@
                     </div> <!-- HFCYG? -->
                     <div class = "flip"> 
                         <div class="flip-inside">
-                            <div class="flip-front">
+                            <div class="flip-front" style="background-image: url(images/svht/svht.jpg)">
+                                <p style="background-color: black; padding: 14px; font-style: italic;">SV HiTech Accounting Website</p>
+                            </div>
+                            <div class ="flip-back">
+                                <p>Back</p>
+                            </div>
+                        </div>
+                    </div> <!-- SV HiTech -->
+                    <div class = "flip"> 
+                        <div class="flip-inside">
+                            <div class="flip-front" style="background-image: url(images/tor/tor-1.jpg)">
                                 <p style="background-color: black; padding: 14px; font-style: italic;">Trials of Rice (TBA)</p>
                             </div>
                             <div class ="flip-back">
@@ -880,14 +974,18 @@
                     </div> <!-- Bandcamp -->
                 </div>
             </div>
-
-            <div id = "contact" class = "backV row FontThin lightFont space">
-                <div class = "card"> 
-                    <h1>Contact Me</h1>
-                    <p>In-Progress</p>
-                </div>
             </div>
 
+            <div id = "contact" style="padding-top: 70px;">
+                <div id = "contact" class = "backV row FontThin lightFont space">
+                <div class = "card"> 
+                    <div class="paragraph">
+                        <h1 class="center">Contact Me</h1>
+                        <p>In-Progress</p>
+                    </div>
+                </div>
+            </div>
+            </div>
 
             <script>
                 function openClass(event, course) {
