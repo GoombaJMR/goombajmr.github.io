@@ -103,7 +103,7 @@
                 clear: both;
             }
             .card {
-                background-color: #222222;
+                background-color: #222132;
                 padding: 4% 7%;
                 margin: 15px;
                 overflow: hidden;
@@ -154,10 +154,10 @@
                     width: 100%;
                 }
             }
-            .footer {
-                background-color: #F1F1F1;
+            .shadow {
+                background-color: #333343;
                 text-align: center;
-                padding: 10px;
+                padding: 17.5px;
             }
             .pad {
                 padding: 10px 20px;
@@ -191,8 +191,8 @@
                 font-size: 18px;
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
                 color: #FBFBFB;
-                letter-spacing: 1px;
-                word-spacing: 1px;
+                letter-spacing: 0.8px;
+                word-spacing: 0.3px;
             }
             .paragraph p {
                 line-height: 45px;
@@ -365,10 +365,11 @@
             }
             .cumGPAbar {
                 border: 1px solid #FFC125; 
-                max-width: 300px; 
+                max-width: 440px; 
                 display: block; 
                 margin-left: auto; 
                 margin-right: auto;
+                background-color: black;
             }
             .varsitybar {
                 max-width: 700px;
@@ -391,6 +392,7 @@
                 border-radius: 30px;
             }
             .gpa {width: 84.5%; background-color: royalblue;}
+            .kas {width: 95%; background-color: #DF2020;}
             
             .rating {width: 98%; background-color: forestgreen;}
             .sesh {width: 100%; background-color: darkslateblue;}
@@ -502,8 +504,8 @@
             .contain-me img {
                 cursor: pointer;
                 border: none;
-                width: 130px;
-                height: 130px;
+                width: 125px;
+                height: 125px;
                 background-size: cover; 
                 background-color: transparent;
             }
@@ -511,6 +513,24 @@
             .contain-me a:active { opacity: 0.6; }
             .skype:hover {
                 
+            }
+            .email {
+                color: black; 
+                padding: 13px 13px 10px 13px; 
+                margin: 5px; 
+                background-color: white;
+                border-bottom: 8px solid #57A5C4;
+                border-radius: 20px;
+                text-decoration: none;
+            }
+            .email:hover {
+                background-color: #EEE;
+                color: #444;
+            }
+            .email:active {
+                background-color: #57A5C4;
+                border-bottom: 8px solid #FFFFFF;
+                color: white;
             }
         </style>
 	</head>
@@ -547,6 +567,7 @@
                     <p>Some hobbies outside of studying and working all day include playing violin, basketball, and practicing my Japanese. I just finished a two month research program at Osaka University, where I had to bike for at least a half an hour to get anywhere; let's just say I love biking now!</p>
                 </div>
             </div>
+            <div class ="shadow"></div>
             
             <!-- Education -->
             <div id = "education" style="padding-top: 70px;">
@@ -554,15 +575,22 @@
                 <div class = "card"> 
                     <div class = "paragraph">
                         <h1 class="center">Education</h1>
-                        <img src="images/bruins.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px; padding-bottom: 30px; border-radius: 0px;" >
-                        
-                        <!-- Cum GPA Bar -->
-                        <div class="skill-container cumGPABar">
-                            <div class="skills gpa" style="border-right: 1px solid #FFC125;"><div style="text-align: left; float:left;">GPA</div><span style="color: #FFC125">3.38 / 4.00</span></div>
+                        <div style="width: 50%; float:left;">
+                            <img src="images/kas.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px; padding-bottom: 30px; border-radius: 0px;" >
                         </div>
-                        
+                        <div style="width: 50%; float:left;">
+                            <img src="images/bruins.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px; padding-bottom: 30px; border-radius: 0px;" >
+                        </div>
+                        <!-- Cum GPA Bar -->
+                        <div class="skill-container cumGPABar" style="clear:both;">
+                            <div style="">
+                                <div class="skills kas" style="border-right: 1px solid darkred;"><div style="text-align: left; float:left;">GPA (KAS)</div><span style="color: #FFFFFF">3.80 / 4.00</span></div>
+                                <div class="skills gpa" style="border-right: 1px solid blue;"><div style="text-align: left; float:left;">GPA (UCLA)</div><span style="color: #FFFFFF">3.38 / 4.00</span></div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
                         <p>In-Progress</p>
-                        <p style="line-height: 30px;">For General Education courses, there are three main foundations where courses fit in. [1] Arts &amp; Humanities [2] Society &amp; Culture [3] Physical &amp; Life Sciences (+Lab). These will be appropriately labeled as AH, SC, and PL in the General Education courses tab.</p>
+                        
                     </div>
                 
                 <!-- Course Buttons -->
@@ -829,10 +857,16 @@
                             <td>Summer 2017</td>
                         </tr>
                     </table>
+                    <ul>
+                        <li style="color:white; letter-spacing: 0.8; font-size: 22px;">[AH] => Arts &amp; Humanities</li>
+                        <li style="color:white; letter-spacing: 0.8; font-size: 22px;">[SC] => Society &amp; Culture</li>
+                        <li style="color:white; letter-spacing: 0.8; font-size: 22px;">[PL] => Physical &amp; Life Sciences</li>
+                    </ul>
                     </div>
                 </div>
             </div>
             </div>
+            <div class ="shadow"></div>
             
             <!-- Work -->
             <div id = "work" style="padding-top: 70px;">
@@ -1019,6 +1053,7 @@
                     </div>
                 </div>
             </div>
+            <div class ="shadow"></div>
             
             <!-- Projects -->
             <div id = "proj" style="padding-top: 70px;">
@@ -1119,6 +1154,7 @@
                 </div>
             </div>
             </div>
+            <div class ="shadow"></div>
             
             <!-- Contact -->
             <div id = "contact" style="padding-top: 70px;">
@@ -1126,8 +1162,6 @@
                 <div class = "card"> 
                     <div class="paragraph">
                         <h1 class="center">Contact Me</h1>
-                        <p>In-Progress</p>
-                        
                         <!-- Social Media Icons -->
                         <div class="contain-me">
                             <div class="contain-me2">
@@ -1144,10 +1178,12 @@
                                 <a href="https://www.instagram.com/julian.m.rice/"><img src="images/icons/instagram.png"></a>
                             </div>
                         </div>
+                        <p style="padding-top:150px; text-align: center; max-width: 500px; margin-left: auto; margin-right: auto; display: block;">Feel free to contact through anything you see above! Also, you can email me at <a href="mailto:rice.m.julian@gmail.com"><span class="email">rice.m.julian@gmail.com</span></a> for any questions, requests, or potential job opportunities!</p>
                     </div>
                 </div>
             </div>
             </div>
+            <div class ="shadow"></div>
             
             <!-- Scripts -->
             <script>
