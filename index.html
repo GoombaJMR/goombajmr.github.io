@@ -47,13 +47,15 @@
             }
             .navbar a {
                 float: left;
-                display: block;
+                display: inline-block;
                 color: #f2f2f2;
                 text-align: center;
                 padding: 14px 20px;
                 margin: 0px 20px;
+                font-size: 20px;
                 text-decoration: none;
             }
+
             .navbar a:hover {
                 background: #ddd;
                 color: black;
@@ -102,8 +104,8 @@
             }
             .card {
                 background-color: #222222;
-                padding: 3% 7%;
-                margin: 20px;
+                padding: 4% 7%;
+                margin: 15px;
                 overflow: hidden;
             }
             .tab {
@@ -119,14 +121,12 @@
             .tab button {
                 background-color: inherit;
                 color: #DEDEFF;
-                float: left;
                 border: none;
                 outline: none;
                 cursor: pointer;
-                padding: 15px 10px;
+                padding: 15px 15px;
                 font-weight: bold;
-                font-style: italic;
-                font-size: 14px;
+                font-size: 20px;
                 transition: 0.5s;
             }
             .tab button:hover {
@@ -188,7 +188,7 @@
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
             }
             p {
-                font-size: 21px;
+                font-size: 18px;
                 font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
                 color: #FBFBFB;
                 letter-spacing: 1px;
@@ -262,10 +262,13 @@
             }
             li {
                 color: black;
-                font-size: 18px;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 35px;
             }
             ul {
                 list-style: none;
+                display: inline-block;
             }
             ul li:before {
                 content: '+';
@@ -358,13 +361,19 @@
             }
             .skill-container {
                 width: 100%;
-                background-color: black;
+                background-color: #F2F2F2;
             }
             .cumGPAbar {
                 border: 1px solid #FFC125; 
                 max-width: 300px; 
                 display: block; 
                 margin-left: auto; 
+                margin-right: auto;
+            }
+            .varsitybar {
+                max-width: 700px;
+                display: block;
+                margin-left: auto;
                 margin-right: auto;
             }
             .skills {
@@ -382,6 +391,12 @@
                 border-radius: 30px;
             }
             .gpa {width: 84.5%; background-color: royalblue;}
+            
+            .rating {width: 98%; background-color: forestgreen;}
+            .sesh {width: 100%; background-color: darkslateblue;}
+            .oppo {width: 35.5%; background-color: darkmagenta;}
+            .spd {width: 99%; background-color: coral;}
+            
             .cpp {width: 85%; background-color: #004589;}
             .python {width: 75%; background-color: #2F7CC7;}
             .c{width: 70%; background-color: darkblue;}
@@ -392,6 +407,30 @@
             .bash {width: 55%; background-color: darkmagenta;}
             .php {width: 50%; background-color: deeppink;}
             .react {width: 40%; background-color: darkcyan; }
+            
+            .legend {
+                background-color: azure;
+                padding: 10px 40px;
+                max-width: 75%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                border-radius: 50px;
+            }
+            .legendUL {
+                background-color: white;
+                padding: 10px 40px;
+                width: 80%;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                border-radius: 50px;
+            }
+            .legend p {
+                color: black;
+                font-size: 20px;
+            }
             
             a.site-button {
                 background-color: #F3F3F3;
@@ -450,15 +489,42 @@
             #contact {
                 
             }
+            .contain-me {
+                float: left;
+                position: relative; 
+                left: 50%;
+            }
+            .contain-me2 {
+                float: left;
+                position: relative;
+                left: -50%;
+            }
+            .contain-me img {
+                cursor: pointer;
+                border: none;
+                width: 130px;
+                height: 130px;
+                background-size: cover; 
+                background-color: transparent;
+            }
+            .contain-me a:hover { opacity: 0.8; }
+            .contain-me a:active { opacity: 0.6; }
+            .skype:hover {
+                
+            }
         </style>
 	</head>
 
 	<body class = "back0">
 		<div class = "navbar FontThin pad">
             <a href = "#home" onMouseOver="this.style.background ='#7AA328'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000'; this.style.color = '#F2F2F2'">Home</a>
+            
             <a href = "#education" onMouseOver="this.style.background ='#FF6600'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000'">Education</a>
+            
             <a href = "#work" onMouseOver="this.style.background ='#CC0953'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000'; this.style.color = '#F2F2F2'">Work</a>
+
             <a href = "#proj" onMouseOver="this.style.background ='#7E1B9D'; this.style.color = '#FFFFFF'" onMouseOut="this.style.background='#000'; this.style.color = '#F2F2F2'">Projects</a>
+            
             <a href = "#contact" onMouseOver="this.style.background ='#57A5C4'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000'; this.style.color = '#F2F2F2'">Contact</a>
         </div>
         
@@ -481,6 +547,7 @@
                 </div>
             </div>
             
+            <!-- Education -->
             <div id = "education" style="padding-top: 70px;">
                 <div class = "backM row FontThin lightFont space">
                 <div class = "card"> 
@@ -494,14 +561,18 @@
                         </div>
                         
                         <p>In-Progress</p>
-                        <p>*For General Education courses, there are three main foundations where courses fit in. [1] Arts &amp; Humanities [2] Society &amp; Culture [3] Physical &amp; Life Sciences (+Lab). These will be appropriately labeled as AH, SC, and PL in the General Education courses tab.</p>
+                        <p style="line-height: 30px;">For General Education courses, there are three main foundations where courses fit in. [1] Arts &amp; Humanities [2] Society &amp; Culture [3] Physical &amp; Life Sciences (+Lab). These will be appropriately labeled as AH, SC, and PL in the General Education courses tab.</p>
                     </div>
-                    <div class = "tab"> <!-- Tab Links -->
+                
+                <!-- Course Buttons -->
+                <div class = "tab"> 
                         <button class = "tablinks" onclick="openClass(event,'CS')">Computer Science</button>
                         <button class = "tablinks" onclick="openClass(event,'LING')">Linguistics</button>
                         <button class = "tablinks" onclick="openClass(event,'JP')">Japanese</button>
                         <button class = "tablinks" onclick="openClass(event,'GENED')">General Education</button>
                     </div>
+                    
+                <!-- Computer Science Courses -->
                 <div id = "CS" class = "tabcontent"> <!-- Tab Content -->
                     <h3 class="center">Computer Science</h3>
                     <table>
@@ -546,7 +617,7 @@
                             <td>Summer 2018</td>
                         </tr>
                         <tr>
-                            <td>Operating System Principles</td>
+                            <td>Operating Systems</td>
                             <td>CS 111</td>
                             <td>Fall 2018</td>
                         </tr>
@@ -561,7 +632,7 @@
                             <td>Winter 2019</td>
                         </tr>
                         <tr>
-                            <td>(???) Database Systemes</td>
+                            <td>(???) Database Systems</td>
                             <td>CS 143</td>
                             <td>Spring 2019</td>
                         </tr>
@@ -586,7 +657,9 @@
                             <td>Summer 2017</td>
                         </tr>
                     </table>
-</div>
+                </div>
+                    
+                <!-- Linguistics Courses -->
                 <div id = "LING" class = "tabcontent">
                     <h3 class="center">Linguistics</h3>
                     <table>
@@ -637,6 +710,8 @@
                         </tr>
                     </table>
                     </div>
+                
+                <!-- Japanese Courses -->
                 <div id = "JP" class = "tabcontent">
                     <h3 class="center">Japanese</h3>
                     <table>
@@ -692,6 +767,8 @@
                         </tr>
                     </table>
                     </div>
+                    
+                <!-- General Education Courses -->
                 <div id = "GENED" class = "tabcontent">
                     <h3 class="center">General Education</h3>
                     <table>
@@ -756,141 +833,192 @@
             </div>
             </div>
             
+            <!-- Work -->
             <div id = "work" style="padding-top: 70px;">
                 <div class = "backDarkRed row FontThin lightFont space">
-                <div class = "card"> 
-                    <div class="paragraph">
-                        <h1 class="center">Work Experience</h1>
-                        <p>In-Progress</p>
+                    <div class = "card"> 
+                        <div class="paragraph">
+                            <h1 class="center">Work Experience</h1>
+                            <p>In-Progress</p>
+                        </div>
+
+                        <!-- FF -->
+                        <div>
+                            <button class="collapsible" style="background-color:#F6E112" onMouseOver="this.style.background ='#F4E65A'" onMouseOut="this.style.background ='#F6E112'">TBA <span style="font-weight: normal;">- Full Stack Developer</span></button>
+                            <div class ="collapsible-content" style="background-color:#FFF380">
+                                <p class="collapse">August 2018 - Present</p>
+                                <p class="collapse">Details to be announced later. Some details can be seen by checking the first project, iOS Application (TBA).</p>
+                            </div>
+                        </div>
+
+                        <!-- SuperCoding -->
+                        <div>
+                            <button class="collapsible">SuperCoding <span style="font-weight: normal;">- Technology Instructor, Partner</span></button>
+                            <div class ="collapsible-content">
+                                <p class="collapse" style="font-weight: bold;">September 2017 - Present</p>
+                                <p class="collapse">I work along two other entrepreneurs, assisting with website &amp; curricula development, marketing, and increasing social media presence.</p>
+                                <p class="collapse">I have planned and developed the entire curriculum for the following courses: </p>
+                                <div class="legendUL">
+                                    <ul>
+                                        <li>Practical Coding (HTML/CSS, C++)</li>
+                                        <li>Practical Coding 2 (Python 2.7)</li>
+                                        <li>Practical Coding 2 Python Projects (Turtle/Tkinter)</li>
+                                        <li>2D Game Development 1 (Top-Down Action)</li>
+                                        <li>2D Game Development 2 (Platformer)</li>
+                                        <li>2D Game Development 3 (Action-Platformer)</li>
+                                    </ul>
+                                </div>
+                                <p class="collapse">You can check out the website  and the courses we offer below</p>
+                                <div class="pad"></div>
+                                <div style="text-align: center;">
+                                    <a href="https://www.supercoding.io" class="site-button">Visit SuperCoding!</a>
+                                </div>
+                                <div class="pad"></div>
+                                <p class="collapse">I instruct weekly online and offline courses for all levels of 2D Game Development, creating and helping elementary and middle school students create video games using GameMaker Studio 2 (C++).</p>
+                                <p class="collapse">Furthermore, I also instruct weekly online and offline courses for all levels of Practical Coding, programming and helping high school students write programs and design websites using C++, Python (including Tkinter and Turtle), and HTML &amp; CSS</p>
+
+                                <div class="image-gallery">
+                                    <div class="slides1">
+                                        <img src="images/sc/sc-1.jpg" class="sde">
+                                    </div>
+                                    <div class="slides1">
+                                        <img src="images/sc/sc-2.jpg" class="sde">
+                                    </div>
+                                    <div class="slides1">
+                                        <img src="images/sc/sc-3.jpg" class="sde">
+                                    </div>
+                                    <div class="slides1">
+                                        <img src="images/sc/sc-4.jpg" class="sde">
+                                    </div>
+                                    <div class="slides1">
+                                        <img src="images/sc/sc-5.jpg" class="sde">
+                                    </div>
+                                    <!-- Next/Prev -->
+                                    <a class="prev sde" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="next sde" onclick="plusSlides(1)">&#10095;</a>
+                                    <div class="caption-container">
+                                        <p id="caption"></p>
+                                    </div>
+                                </div>
+                                <div class="space"></div>
+                            </div>
+                        </div> 
+
+                        <!-- Microsoft -->
+                        <div>
+                            <button class="collapsible" style="background-color:#FF6600" onMouseOver="this.style.background ='#FF812D'" onMouseOut="this.style.background ='#FF6600'">Microsoft <span style="font-weight: normal;">- Campus Representative</span></button>
+                            <div class ="collapsible-content" style="background-color:#FF9249">
+                                <p class="collapse" style="font-weight: bold;">September 2017 - May 2018</p>
+                                <p class="collapse">I spent 26 weeks promoting Microsoft via marketing, conducting over 25 in-depth conversations and weekly group announcements with UCLA students per week. It was a great experience because I got to connect with countless UCLA students and faculty!</p>
+                                <p class="collapse">I gathered over 1000 total likes through Instagram, Facebook, and Twitter. The majority of my likes came from Instagram, and I had more than 15 Instagram stories that received over 180 views. The goal of these tasks were to increase awareness of new Microsoft products (like the Surface Book 2 and Xbox One X), and seeing some of my friends get new Books instaed of Macbooks made my day.</p>
+                                <img src="images/msft/msft-1.jpg" class="cent">
+                                <p class="collapse">I documented activity weekly by sending a report to my boss, containing a couple paragraphs on the weekly activities done, results of the surveys, occasional videos and quotes from tabling.</p>
+                                <img src="images/msft/msft-2.jpg" class="cent">
+                                <p class="collapse">Last but not least, I participated in the Tiny House event, which was two straight days of extremely crazy Microsoft marketing, consisting of social media contests (beforehand), raffles, and a ton of free nitro coffee. The Tiny House is a portable two story mini building that allows around 50 people at the time to view all of the Surface products and experience games like Cuphead, 2K18, and Madden 18 on two Xbox One S'.</p>
+                            </div>
+                        </div> 
+
+                        <!-- The Coding School -->
+                        <div>
+                            <button class="collapsible" style="background-color:#6DCFF6" onMouseOver="this.style.background ='#8CDAF9'" onMouseOut="this.style.background ='#6DCFF6'">The Coding School <span style="font-weight: normal;">- Technology Instructor</span></button>
+                            <div class ="collapsible-content" style="background-color:#9AE2FF">
+                                <p class="collapse" style="font-weight: bold;">September - December (2017/2018)</p>
+                                <p class="collapse">During Fall 2017, I taught 27 students the basics of HTML 5 and CSS 3 over 10 weeks, using a custom made GitHub organization to allow all students to concurrently view the progress behind their site throughout the course.</p>
+                                <p class="collapse">During Fall 2018, I will be teaching students at the same school the basics of JavaScript over 10 weeks, and will consist of a similarly constructed GitHub organization that will allow all students to view their progress throughout the course.</p>
+                                <p class="collapse">Images will be posted <i>here</i> from Fall 2018 when the curriculum starts.</p>
+                            </div>
+                        </div> 
+
+                        <!-- Varsity Tutors -->
+                        <div>
+                            <button class="collapsible" style="background-color:#1E90FF" onMouseOver="this.style.background ='#379DFF'" onMouseOut="this.style.background ='#1E90FF'">Varsity Tutors <span style="font-weight: normal;">- Private Tutor</span></button>
+                            <div class ="collapsible-content" style="background-color:#62B2FF">
+                                <p class="collapse" style="font-weight: bold;">August 2017 - April 2018</p>
+                                <p class="collapse">Over the course of eight months, I tutored more than 10 students ranging from early high school to community college students both online and offline, teaching the following subjects: </p>
+                                <div class="legendUL" style="background-color: #B9ECFF">
+                                    <ul>
+                                        <li>ACT Math (2)</li>
+                                        <li>ACT Science (1)</li>
+                                        <li>AP Japanese (2)</li>
+                                        <li>Algebra II (2)</li>
+                                        <li>Precalculus (1)</li>
+                                        <li>IT Systems (1)</li>
+                                        <li>C++ Programming (1)</li>
+                                        <li>Nutrition and Biology (1)</li>
+                                    </ul>
+                                </div>
+                                <p class="collapse">Students that were preparing for the <b>ACT Math and Science sections</b> saw their scores increase from between 3 and 6 points after 10 hours of tutoring over the course of 5 weeks.</p>
+                                <p class="collapse">Students learning <b>AP Japanese</b> became proficient with reading and writing over half of the 400 required Kanji characters, learned numerous vocabulary through my personal intermediate Japanese materials, and practiced speaking Japanese with accent fixing for four hours a week.</p>
+                                <p class="collapse">I have provided a list of data that corresponds to my teaching below, obtained at the Varsity Tutors account.</p>
+                                <div class="skill-container varsitybar" style="border: 2px solid black;">
+                                    <div class="skills rating"><div style="text-align: left; float:left;">Average Rating</div>4.9 / 5.0</div>
+                                    <div class="skills sesh"><div style="text-align: left; float:left;">Average Sessions</div>10</div>
+                                    <div class="skills oppo"><div style="text-align: left; float:left;">Response Rate</div>35.5%</div>
+                                    <div class="skills spd"><div style="text-align: left; float:left;">Average Response Speed</div>1 minute</div>
+                                </div>
+                                <div class="space"></div>
+                                <div class="legend">
+                                    <p><b>Average Rating: </b>The average number of stars given at the end of each tutoring session (out of 5) by the tutee.</p>
+                                    <p><b>Average Sessions:</b>The average number of sessions that the tutor has completed with the same student.</p>
+                                    <p><b>Response Rate: </b>The rate at which I respond to a potential tutoring opportunity. This decreased as my workload increased.</p>
+                                    <p><b>Average Response Speed: </b>The average rate at which I respond to an opportunity, given that I <i>do</i> respond.</p>
+                                </div>
+                                <div class="space"></div>
+                            </div>
+                        </div> 
+
+                        <div style="padding: 10px 0px;"></div>
+
+                        <!-- Programming Language & Skill Proficiency -->
+                        <div>
+                            <button class="collapsible" style="background-color:#F2F2F2; text-align: center; font-style: italic;" onMouseOver="this.style.background ='#F9FAF9'" onMouseOut="this.style.background ='#F2F2F2'">Programming Language &amp; Skill Proficiency</button>
+                            <div class ="collapsible-content" style="background-color:#FFFFFF">
+                                <div style="padding-top: 40px;"></div>
+                                <div class="skill-container">
+                                    <div class="skills cpp"><div style="text-align: left; float:left;">C++</div>85%</div>
+                                </div>
+                                <div class="skill-container">
+                                    <div class="skills python"><div style="text-align: left; float:left;">Python</div>75%</div>
+                                </div>
+                                <div class="skill-container">
+                                    <div class="skills c"><div style="text-align: left; float:left;">C, C#</div>70%</div>
+                                </div>
+                                <div class="skill-container">
+                                    <div class="skills html"><div style="text-align: left; float:left;">HTML</div>70%</div>
+                                </div>
+                                <div class="skill-container">
+                                    <div class="skills css"><div style="text-align: left; float:left;">CSS</div>70%</div>
+                                </div>
+                                <div class="skill-container">
+                                    <div class="skills js"><div style="text-align: left; float:left;">JavaScript</div>60%</div>
+                                </div>
+                                <div class="skill-container">
+                                    <div class="skills unix"><div style="text-align: left; float:left;">UNIX</div>60%</div>
+                                </div>
+                                <div class="skill-container">
+                                    <div class="skills bash"><div style="text-align: left; float:left;">Bash</div>55%</div>
+                                </div>
+                                <div class="skill-container">
+                                    <div class="skills php"><div style="text-align: left; float:left;">PHP</div>50%</div>
+                                </div>
+                                <div class="skill-container">
+                                    <div class="skills react"><div style="text-align: left; float:left;">React Native</div>40%</div>
+                                </div>
+                                <div style="padding-bottom: 15px;"></div>
+                                <p class="collapse">Languages that I have studied but have not used in practice (yet)</p>
+                                <ul>
+                                    <li style="color:darkred; font-size: 17px;">Java (25%)</li>
+                                    <li style="color:darkred; font-size: 17px;">Lua (20%)</li>
+                                    <li style="color:darkred; font-size: 17px;">MySQL (10%)</li>
+                                    <li style="color:darkred; font-size: 17px;">Lisp (10%)* For AI course in Fall 2018</li>
+                                </ul>
+                            </div>
+                        </div> 
                     </div>
-                    <div>
-                        <button class="collapsible" style="background-color:#F6E112" onMouseOver="this.style.background ='#F4E65A'" onMouseOut="this.style.background ='#F6E112'">TBA <span style="font-weight: normal;">- Full Stack Developer</span></button>
-                        <div class ="collapsible-content" style="background-color:#FFF380">
-                            <p class="collapse">August 2018 - Present</p>
-                            <p class="collapse">Details to be announced later. This is related to Project 1: iOS Application</p>
-                        </div>
-                    </div> <!-- FF -->
-                    <div>
-                        <button class="collapsible">SuperCoding <span style="font-weight: normal;">- Technology Instructor, Partner</span></button>
-                        <div class ="collapsible-content">
-                            <p class="collapse">September 2017 - Present</p>
-                            <p class="collapse">I work along two other entrepreneurs, assisting with website &amp; curricula development, marketing, and increasing social media presence.</p>
-                            <p class="collapse">I have planned and developed the entire curriculum for the following courses: </p>
-                            <ul>
-                                <li>Practical Coding (HTML/CSS, C++)</li>
-                                <li>Practical Coding 2 (Python 2.7)</li>
-                                <li>Practical Coding 2 Python Projects (Turtle/Tkinter)</li>
-                                <li>2D Game Development 1 (Top-Down Action)</li>
-                                <li>2D Game Development 2 (Platformer)</li>
-                                <li>2D Game Development 3 (Action-Platformer)</li>
-                            </ul>
-                            <p class="collapse">You can check out the website  and the courses we offer below</p>
-                            <div class="pad"></div>
-                            <div style="text-align: center;">
-                                <a href="https://www.supercoding.io" class="site-button">Visit SuperCoding!</a>
-                            </div>
-                            <div class="pad"></div>
-                            <p class="collapse">I instruct weekly online and offline courses for all levels of 2D Game Development, creating and helping elementary and middle school students create video games using GameMaker Studio 2 (C++).</p>
-                            <p class="collapse">Furthermore, I also instruct weekly online and offline courses for all levels of Practical Coding, programming and helping high school students write programs and design websites using C++, Python (including Tkinter and Turtle), and HTML &amp; CSS</p>
-                            
-                            <div class="image-gallery">
-                                <div class="slides1">
-                                    <img src="images/sc/sc-1.jpg" class="sde">
-                                </div>
-                                <div class="slides1">
-                                    <img src="images/sc/sc-2.jpg" class="sde">
-                                </div>
-                                <div class="slides1">
-                                    <img src="images/sc/sc-3.jpg" class="sde">
-                                </div>
-                                <div class="slides1">
-                                    <img src="images/sc/sc-4.jpg" class="sde">
-                                </div>
-                                <div class="slides1">
-                                    <img src="images/sc/sc-5.jpg" class="sde">
-                                </div>
-                                <!-- Next/Prev -->
-                                <a class="prev sde" onclick="plusSlides(-1)">&#10094;</a>
-                                <a class="next sde" onclick="plusSlides(1)">&#10095;</a>
-                                <div class="caption-container">
-                                    <p id="caption"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- SuperCoding -->
-                    <div>
-                        <button class="collapsible" style="background-color:#FF6600" onMouseOver="this.style.background ='#FF812D'" onMouseOut="this.style.background ='#FF6600'">Microsoft <span style="font-weight: normal;">- Campus Representative</span></button>
-                        <div class ="collapsible-content" style="background-color:#FF9249">
-                            <p class="collapse">September 2017 - May 2018</p>
-                            <p class="collapse">I spent 26 weeks promoting Microsoft via marketing, conducting over 25 in-depth conversations and weekly group announcements with UCLA students per week. It was a great experience because I got to connect with countless UCLA students and faculty!</p>
-                            <p class="collapse">I gathered over 1000 total likes through Instagram, Facebook, and Twitter. The majority of my likes came from Instagram, and I had more than 15 Instagram stories that received over 180 views. The goal of these tasks were to increase awareness of new Microsoft products (like the Surface Book 2 and Xbox One X), and seeing some of my friends get new Books instaed of Macbooks made my day.</p>
-                            <img src="images/msft/msft-1.jpg" class="cent">
-                            <p class="collapse">I documented activity weekly by sending a report to my boss, containing a couple paragraphs on the weekly activities done, results of the surveys, occasional videos and quotes from tabling.</p>
-                            <img src="images/msft/msft-2.jpg" class="cent">
-                            <p class="collapse">Last but not least, I participated in the Tiny House event, which was two straight days of extremely crazy Microsoft marketing, consisting of social media contests (beforehand), raffles, and a ton of free nitro coffee. The Tiny House is a portable two story mini building that allows around 50 people at the time to view all of the Surface products and experience games like Cuphead, 2K18, and Madden 18 on two Xbox One S'.</p>
-                        </div>
-                    </div> <!-- Microsoft -->
-                    <div>
-                        <button class="collapsible" style="background-color:#6DCFF6" onMouseOver="this.style.background ='#8CDAF9'" onMouseOut="this.style.background ='#6DCFF6'">The Coding School <span style="font-weight: normal;">- Technology Instructor</span></button>
-                        <div class ="collapsible-content" style="background-color:#9AE2FF">
-                            <p class="collapse">September - December (2017/2018)</p>
-                        </div>
-                    </div> <!-- The Coding School -->
-                    <div>
-                        <button class="collapsible" style="background-color:#1E90FF" onMouseOver="this.style.background ='#379DFF'" onMouseOut="this.style.background ='#1E90FF'">Varsity Tutors <span style="font-weight: normal;">- Private Tutor</span></button>
-                        <div class ="collapsible-content" style="background-color:#62B2FF">
-                            <p class="collapse">August 2017 - April 2018</p>
-                        </div>
-                    </div> <!-- Varsity Tutors -->
-                    <div style="padding: 10px 0px;"></div>
-                    <div>
-                        <button class="collapsible" style="background-color:#F2F2F2; text-align: center; font-style: italic;" onMouseOver="this.style.background ='#F9FAF9'" onMouseOut="this.style.background ='#F2F2F2'">Programming Language &amp; Skill Proficiency</button>
-                        <div class ="collapsible-content" style="background-color:#FFFFFF">
-                            <div style="padding-top: 10px;"></div>
-                            <div class="skill-container">
-                                <div class="skills cpp"><div style="text-align: left; float:left;">C++</div>85%</div>
-                            </div>
-                            <div class="skill-container">
-                                <div class="skills python"><div style="text-align: left; float:left;">Python</div>75%</div>
-                            </div>
-                            <div class="skill-container">
-                                <div class="skills c"><div style="text-align: left; float:left;">C, C#</div>70%</div>
-                            </div>
-                            <div class="skill-container">
-                                <div class="skills html"><div style="text-align: left; float:left;">HTML</div>70%</div>
-                            </div>
-                            <div class="skill-container">
-                                <div class="skills css"><div style="text-align: left; float:left;">CSS</div>70%</div>
-                            </div>
-                            <div class="skill-container">
-                                <div class="skills js"><div style="text-align: left; float:left;">JavaScript</div>60%</div>
-                            </div>
-                            <div class="skill-container">
-                                <div class="skills unix"><div style="text-align: left; float:left;">UNIX</div>60%</div>
-                            </div>
-                            <div class="skill-container">
-                                <div class="skills bash"><div style="text-align: left; float:left;">Bash</div>55%</div>
-                            </div>
-                            <div class="skill-container">
-                                <div class="skills php"><div style="text-align: left; float:left;">PHP</div>50%</div>
-                            </div>
-                            <div class="skill-container">
-                                <div class="skills react"><div style="text-align: left; float:left;">React Native</div>40%</div>
-                            </div>
-                            <div style="padding-bottom: 15px;"></div>
-                            <p class="collapse">Languages that I have studied but have not used in practice (yet)</p>
-                            <ul>
-                                <li style="color:darkred; font-size: 17px;">Java (25%)</li>
-                                <li style="color:darkred; font-size: 17px;">Lua (20%)</li>
-                                <li style="color:darkred; font-size: 17px;">MySQL (10%)</li>
-                                <li style="color:darkred; font-size: 17px;">Lisp (10%)* For AI course in Fall 2018</li>
-                            </ul>
-                        </div>
-                    </div> <!-- Programming Language & Skill Proficiency -->
                 </div>
             </div>
-            </div>
-                
+            
+            <!-- Projects -->
             <div id = "proj" style="padding-top: 70px;">
                 <div class = "backPurple row FontThin lightFont space">
                 <div class = "card"> 
@@ -975,18 +1103,28 @@
                 </div>
             </div>
             </div>
-
+            
+            <!-- Contact -->
             <div id = "contact" style="padding-top: 70px;">
                 <div id = "contact" class = "backV row FontThin lightFont space">
                 <div class = "card"> 
                     <div class="paragraph">
                         <h1 class="center">Contact Me</h1>
                         <p>In-Progress</p>
+                        <div class="contain-me">
+                                <div class="contain-me2">
+                                <a href="https://github.com/JulianMichaelRice" ><img src="images/icons/github.png"></a>
+                                <a href="https://www.linkedin.com/in/julian-m-rice/"><img src="images/icons/linkedin.png"></a>
+                                <a href="https://facebook.com/realgoomba"><img src="images/icons/facebook.png"></a>
+                                <a href="https://www.instagram.com/julian.m.rice/"><img src="images/icons/instagram.png"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             </div>
-
+            
+            <!-- Scripts -->
             <script>
                 function openClass(event, course) {
                     var i, tabcontent, tablinks;
