@@ -189,11 +189,9 @@ button {
     font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
 }
 p {
-    font-size: 18px;
+    font-size: 20px;
     font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
     color: #FBFBFB;
-    letter-spacing: 0.8px;
-    word-spacing: 0.3px;
 }
 .paragraph p {
     line-height: 40px;
