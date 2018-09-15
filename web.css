@@ -192,8 +192,8 @@ p {
     font-size: 20px;
     font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
     color: #FBFBFB;
-	letter-spacing: -0.3px;
-	word-spacing: -0.6px;
+	letter-spacing: -0.7px;
+	word-spacing: -1px;
 }
 .paragraph p {
     line-height: 40px;
@@ -229,7 +229,7 @@ tr:first-child { background: #222 }
 }
 #overallPadding {
     padding: 2.5% 5%;
-    margin: 4% 9%;
+    margin: 4% 4%;
 }
 #home {
 
