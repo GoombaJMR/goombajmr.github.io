@@ -196,7 +196,7 @@ p {
     word-spacing: 0.3px;
 }
 .paragraph p {
-    line-height: 45px;
+    line-height: 40px;
 }
 h1 {
     color: #FFFFFF;
@@ -360,10 +360,7 @@ p.collapse {
 .active, .demo:hover {
     opacity: 1;
 }
-.skill-container {
-    width: 100%;
-    background-color: #F2F2F2;
-}
+
 .cumGPAbar {
     border: 1px solid #FFC125; 
     max-width: 440px; 
@@ -378,12 +375,7 @@ p.collapse {
     margin-left: auto;
     margin-right: auto;
 }
-.skills {
-    text-align: right;
-    padding: 10px;
-    font-size: 16px;
-    color: antiquewhite;
-}
+
 .cent {
     display: block;
     margin-left: auto;
@@ -392,24 +384,6 @@ p.collapse {
     border: 2px solid black;
     border-radius: 30px;
 }
-.gpa {width: 84.5%; background-color: royalblue;}
-.kas {width: 95%; background-color: #DF2020;}
-
-.rating {width: 98%; background-color: forestgreen;}
-.sesh {width: 100%; background-color: darkslateblue;}
-.oppo {width: 35.5%; background-color: darkmagenta;}
-.spd {width: 99%; background-color: coral;}
-
-.cpp {width: 85%; background-color: #004589;}
-.python {width: 75%; background-color: #2F7CC7;}
-.c{width: 70%; background-color: darkblue;}
-.html {width: 70%; background-color: orangered;}
-.css {width: 70%; background-color: cornflowerblue;}
-.js {width: 60%; background-color: #E78C00;}
-.unix {width: 60%; background-color: darkgreen;}
-.bash {width: 55%; background-color: darkmagenta;}
-.php {width: 50%; background-color: deeppink;}
-.react {width: 40%; background-color: darkcyan; }
 
 .legend {
     background-color: azure;
@@ -499,7 +473,7 @@ a:active.site-button { background-color: #F0F0F0; }
 }
 .a a {
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     text-decoration: none;
 }
 .a a:hover {
@@ -516,7 +490,7 @@ a:active.site-button { background-color: #F0F0F0; }
 	color: gold;
 }
 .b a {
-    font-size: 22px;
+    font-size: 18px;
     color: white;
     text-decoration: none;
 }
