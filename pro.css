@@ -29,17 +29,17 @@
 
 .ios-progress {width: 30%; background-color: #000787; }
 .ios-difficulty {width: 60%; background-color: #950714; }
-.ios-hours {width: 25%; background-color: #008000; }
+.ios-hours {width: 23%; background-color: #008000; }
 .ios-priority {width: 95%; background-color: #D4720E; }
 
 .gm2-progress {width: 15%; background-color: #000787; }
 .gm2-difficulty {width: 85%; background-color: #950714; }
-.gm2-hours {width: 35%; background-color: #008000; }
+.gm2-hours {width: 33%; background-color: #008000; }
 .gm2-priority {width: 85%; background-color: #D4720E; }
 
 .rr-progress {width: 100%; background-color: #000787; }
 .rr-difficulty {width: 65%; background-color: #950714; }
-.rr-hours {width: 90%; background-color: #008000; }
+.rr-hours {width: 97%; background-color: #008000; }
 
 .hfc-progress {width: 100%; background-color: #000787; }
 .hfc-difficulty {width: 50%; background-color: #950714; }
@@ -47,7 +47,7 @@
 
 .hta-progress {width: 100%; background-color: #000787; }
 .hta-difficulty {width: 35%; background-color: #950714; }
-.hta-hours {width: 25%; background-color: #008000; }
+.hta-hours {width: 23%; background-color: #008000; }
 
 .tor-progress {width: 55%; background-color: #000787; }
 .tor-difficulty {width: 55%; background-color: #950714; }
@@ -58,6 +58,10 @@
 .bcp-difficulty {width: 60%; background-color: #950714; }
 .bcp-hours {width: 78%; background-color: #008000; }
 .bcp-priority {width: 25%; background-color: #D4720E; }
+
+.cam-progress {width: 100%; background-color: #000787; }
+.cam-difficulty {width: 40%; background-color: #950714; }
+.cam-hours {width: 40%; background-color: #008000; }
 
 .space {
 	margin-bottom: 25%;

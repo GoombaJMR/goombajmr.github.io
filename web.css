@@ -305,14 +305,21 @@ p.collapse {
 
 .image-gallery {
     position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 100%;
+	max-width: 600px;
 }
 .slides1 {
     display: none;
+	width: 100%;
+	max-width: 600px;
 }
 .cursor {
     cursor: pointer;
 }
-.prev, .next {
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -330,8 +337,8 @@ p.collapse {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8); /*20% transparent*/
+.next:hover {
+    background-color: rgba(0,0,0,0.5); /*20% transparent*/
 }
 .numbertext {
     color: #F2F2F2;
@@ -345,12 +352,11 @@ p.collapse {
     background-color: #222;
     padding: 2px 16px;
     color: white;
+	
 }
 .sde {
-    max-width: 768px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	width: 100%;
+	max-width: 600px;
     font-size: 22px;
 }
 .demo {
@@ -409,7 +415,7 @@ p.collapse {
     font-size: 20px;
 }
 
-a.site-button {
+.site-button {
     background-color: #F3F3F3;
     color: black;
     padding: 15px 25px;
@@ -420,7 +426,7 @@ a.site-button {
     font-weight: 550;
 }
 a:link.site-button { color: white; }
-a:visited.site-button { color: crimson; }
+a:visited.site-button { color: red; }
 a:hover.site-button { background-color: #F6F6F6; }
 a:active.site-button { background-color: #F0F0F0; }
 #proj {
@@ -432,6 +438,21 @@ a:active.site-button { background-color: #F0F0F0; }
     height: 400px;
     perspective: 1000px;
     float: left;
+}
+.flip a {
+	color: #7E1B9D;
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 20px;
+	background-color: white;
+}
+.flip a:hover {
+	background-color: #F0F0F0;
+}
+.flip a:active {
+	background-color: #58126D;
+	color: white;
 }
 .flip-inside {
     position: relative;
@@ -537,4 +558,22 @@ a:active.site-button { background-color: #F0F0F0; }
     background-color: #57A5C4;
     border-bottom: 8px solid #FFFFFF;
     color: white;
+}
+
+.resume {
+	text-decoration: none; 
+	color: white; 
+	padding: 10px; 
+	background-color: seagreen; 
+	border-radius: 20px;
+}
+
+.resume:hover {
+	color: gold;
+	background-color: darkgreen;
+}
+
+.resume:active {
+	color: darkgreen;
+	background-color: gold;
 }
