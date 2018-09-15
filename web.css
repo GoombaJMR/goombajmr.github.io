@@ -143,7 +143,6 @@
 }
 button {
     font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
-    letter-spacing: 1.1px;
 }
 @media screen and (max-width: 600px) {
     .column {
@@ -183,7 +182,6 @@ button {
 }
 .FontThin {
     font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
-    letter-spacing: 1.2px;
 }
 .FontThinner {
     font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
@@ -192,8 +190,8 @@ p {
     font-size: 20px;
     font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
     color: #FBFBFB;
-	letter-spacing: -0.7px;
-	word-spacing: -1px;
+	letter-spacing: -0.5px;
+	word-spacing: -0.7px;
 }
 .paragraph p {
     line-height: 40px;
@@ -229,7 +227,7 @@ tr:first-child { background: #222 }
 }
 #overallPadding {
     padding: 2.5% 5%;
-    margin: 4% 4%;
+    margin: 4% 8%;
 }
 #home {
 
@@ -477,6 +475,7 @@ a:active.site-button { background-color: #F0F0F0; }
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	border: 12px solid black;
 
 }
 .flip-back {
@@ -543,7 +542,7 @@ a:active.site-button { background-color: #F0F0F0; }
 }
 .email {
     color: black; 
-    padding: 13px 13px 10px 13px; 
+    padding: 8px 13px 8px 13px; 
     margin: 5px; 
     background-color: white;
     border-bottom: 8px solid #57A5C4;
