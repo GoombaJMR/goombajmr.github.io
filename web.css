@@ -191,7 +191,8 @@ p {
     font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
     color: #FBFBFB;
 	letter-spacing: -0.5px;
-	word-spacing: -0.7px;
+	word-spacing: -1.5px;
+	font-weight: 100;
 }
 .paragraph p {
     line-height: 40px;
