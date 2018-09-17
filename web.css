@@ -8,6 +8,86 @@
     font-family: Helvetica;
 
 }
+.slideShow {
+	position: relative;
+	margin: auto;
+}
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 5s;
+	animation-name: fade;
+	animation-duration: 5s;
+}
+.slideShow img {
+	-o-object-fit: cover;
+	object-fit: cover;
+	overflow: hidden;
+	height: 50%;
+	opacity: 0.5;
+}
+.slideShow img:hover {
+	opacity: 0.85;
+	-webkit-animation-name: fade-in;
+	-webkit-animation-duration: 2s;
+	animation-name: fade-in;
+	animation-duration: 2s;
+}
+.stop {
+	height: 480px;
+	width: 100%;
+}
+.headerContainer {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.cen {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	font-size: 64px;
+	visibility: visible;
+	-webkit-visibility: visible;
+    opacity: 1;
+    transition: opacity 1.5s linear;
+	-webkit-transition: opacity 1.5s linear;
+    font-size: 60px;
+}
+.cen:hover {
+	visibility: hidden;
+	-webkit-visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 0.5s linear;
+	-webkit-transition: visibility 0s 2s, opacity 0.5s linear;
+}
+.cen-down {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .3} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .3} 
+  to {opacity: 1}
+}
+@-webkit-keyframes fade-in {
+  from {opacity: 0.5} 
+  to {opacity: 0.85}
+}
+
+@keyframes fade-in {
+  from {opacity: 0.5} 
+  to {opacity: 0.85}
+}
+
 .headFont {
     visibility: visible;
 	-webkit-visibility: visible;

@@ -20,11 +20,49 @@
         <div class = "main">
             <p style = "color: white">Hello!</p>
         </div>
-        <div class = "header" id = "home">
-            <div class = "trans transPad">
-                <h1 class = "lightFont headFont">Julian M. Rice</h1>
-            </div>
-        </div>
+		<div class="slideShow headerContainer">
+			<div class="mySlides fade">
+				<img src="images/banners/1.jpg" style="width: 100%;">
+				<h1 class="cen">Julian M. Rice</h1>
+				<p class="cen-down">Shibuya, Tokyo</p>
+			</div>
+			<div class="mySlides fade">
+				<img src="images/banners/2.jpg" style="width: 100%;">
+				<h1 class="cen">Julian M. Rice</h1>
+				<p class="cen-down">Westwood, Los Angeles</p>
+			</div>
+			<div class="mySlides fade">
+				<img src="images/banners/3.jpg" style="width: 100%;">
+				<h1 class="cen">Julian M. Rice</h1>
+				<p class="cen-down">Microsoft Tiny House, UCLA</p>
+			</div>
+			<div class="mySlides fade">
+				<img src="images/banners/4.jpg" style="width: 100%;">
+				<h1 class="cen">Julian M. Rice</h1>
+				<p class="cen-down">SuperCoding, Palos Verdes</p>
+			</div>
+			<div class="mySlides fade">
+				<img src="images/banners/5.png" style="width: 100%;">
+				<h1 class="cen">Julian M. Rice</h1>
+				<p class="cen-down">Trials of Rice, Project</p>
+			</div>
+			<div class="mySlides fade">
+				<img src="images/banners/6.jpg" style="width: 100%;">
+				<h1 class="cen">Julian M. Rice</h1>
+				<p class="cen-down">Kushikatsu in Osaka</p>
+			</div>
+			<div class="mySlides fade">
+				<img src="images/banners/9.jpg" style="width: 100%;">
+				<h1 class="cen">Julian M. Rice</h1>
+				<p class="cen-down">Dotonbori, Osaka</p>
+			</div>
+			<!--
+			<div class = "header" id = "home">
+				<div class = "trans transPad">
+					<h1 class = "lightFont headFont">Julian M. Rice</h1>
+				</div>
+			</div> -->
+		</div>
         <div id = "overallPadding"> 
             <!-- WELCOME -->
             <div class = "back2 row">
@@ -832,6 +870,21 @@
                     dots[slideIndex-1].className += " active";
                     captionText.innerHTML = dots[slideIndex-1].alt;
                 }
+				
+				var slideIndex = 0;
+				showSlides();
+
+				function showSlides() {
+					var i;
+					var slides = document.getElementsByClassName("mySlides");
+					for (i = 0; i < slides.length; i++) {
+					   slides[i].style.display = "none";  
+					}
+					slideIndex++;
+					if (slideIndex > slides.length) {slideIndex = 1}    
+					slides[slideIndex-1].style.display = "block";  
+					setTimeout(showSlides, 10000); // Change image every 2 seconds
+				}
             </script>
         </div>
     </body>
