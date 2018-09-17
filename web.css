@@ -10,14 +10,18 @@
 }
 .headFont {
     visibility: visible;
+	-webkit-visibility: visible;
     opacity: 1;
     transition: opacity 2s linear;
+	-webkit-transition: opacity 2s linear;
     font-size: 60px;
 }
 .headFont:hover {
     visibility: hidden;
+	-webkit-visibility: hidden;
     opacity: 0;
     transition: visibility 0s 2s, opacity 0.5s linear;
+	-webkit-transition: visibility 0s 2s, opacity 0.5s linear;
 }
 .trans {
     background-color: rgb(57, 4, 81, 0.4);
