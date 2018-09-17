@@ -111,8 +111,8 @@
     text-align: center;
     margin-left: -5%;
     margin-right: -5%;
-    display: flex;
-    justify-content: center;
+	display: flex;
+    justify-content: space-around;
 }
 .tab button {
     background-color: inherit;
@@ -244,6 +244,7 @@ tr:first-child { background: #222 }
 }
 .profImg:hover {
     transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);
 }
 .justify {
     text-align: justify;
@@ -463,6 +464,7 @@ a:active.site-button { background-color: #F0F0F0; }
 }
 .flip:hover .flip-inside {
     transform: rotateX(-180deg);
+	-webkit-transform: rotateX(-180deg);
 }
 .flip-front, .flip-back {
     position: absolute;
@@ -483,6 +485,7 @@ a:active.site-button { background-color: #F0F0F0; }
     color: white;
     background-color: #7E1B9D;
     transform: rotateX(-180deg);
+	-webkit-transform: rotateX(-180deg)
 }
 
 .a {
