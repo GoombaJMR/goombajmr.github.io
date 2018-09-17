@@ -192,38 +192,47 @@
 }
 .tab {
     overflow: hidden;
-    border: 4px solid #FF6600;
+
     background-color: #424;
     text-align: center;
     margin-left: -5%;
     margin-right: -5%;
 	display: flex;
-    justify-content: space-around;
+	justify-content: center;
+}
+.tab:hover {
+	background-color: #DEDEFF;
+}
+.tab:hover button {
+	color: black;
 }
 .tab button {
     background-color: inherit;
     color: #DEDEFF;
-    border: none;
+	border: none;
     outline: none;
     cursor: pointer;
-    padding: 15px 15px;
-    font-weight: bold;
+    padding: 6px 6px;
+	margin-left: auto;
+	margin-right: auto;
+    font-weight: 500;
     font-size: 20px;
     transition: 0.5s;
 }
 .tab button:hover {
-    background-color: #F2F2F2;
-    color: #333;
-    font-weight: bold;
+    background-color: #DEDEFF;
+    color: #FF6600;
+    font-weight: 500;
 }
 .tab button.active {
-    background-color: #F2F2F2;
+	font-weight: 500;
+    background-color: #DEDEFF;
     color: #333;
 }
 .tabcontent {
     display: none;
     padding: 10px 10px;
-    border: 4px solid #FF6600;
+
     border-top: none;
     margin: 0% -5%;
 }
