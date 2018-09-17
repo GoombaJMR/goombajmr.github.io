@@ -18,7 +18,7 @@
         </div>
         
         <div class = "main">
-            <p style = "color: white">Hello!</p>
+            <p style = "color: white">You found Kuribo #1!</p>
         </div>
 		<div id = "home" class="slideShow headerContainer">
 			<div class="mySlides fade">
@@ -30,6 +30,11 @@
 				<img src="images/banners/2.jpg" style="width: 100%;">
 				<h1 class="cen">Julian M. Rice</h1>
 				<p class="cen-down">Westwood, Los Angeles</p>
+			</div>
+			<div class="mySlides fade">
+				<img src="images/banners/7.jpg" style="width: 100%;">
+				<h1 class="cen">Julian M. Rice</h1>
+				<p class="cen-down">85 Building, Kaohsiung</p>
 			</div>
 			<div class="mySlides fade">
 				<img src="images/banners/3.jpg" style="width: 100%;">
@@ -479,30 +484,6 @@
                                 <div class="pad"></div>
                                 <p class="collapse">I instruct weekly online and offline courses for all levels of 2D Game Development, creating and helping elementary and middle school students create video games using GameMaker Studio 2 (C++).</p>
                                 <p class="collapse">Furthermore, I also instruct weekly online and offline courses for all levels of Practical Coding, programming and helping high school students write programs and design websites using C++, Python (including Tkinter and Turtle), and HTML &amp; CSS</p>
-
-                                <div class="image-gallery">
-                                    <div class="slides1">
-                                        <img src="images/sc/sc-1.jpg" class="sde">
-                                    </div>
-                                    <div class="slides1">
-                                        <img src="images/sc/sc-2.jpg" class="sde">
-                                    </div>
-                                    <div class="slides1">
-                                        <img src="images/sc/sc-3.jpg" class="sde">
-                                    </div>
-                                    <div class="slides1">
-                                        <img src="images/sc/sc-4.jpg" class="sde">
-                                    </div>
-                                    <div class="slides1">
-                                        <img src="images/sc/sc-5.jpg" class="sde">
-                                    </div>
-                                    <!-- Next -->
-                                    <a class="next sde" onclick="plusSlides(1)">&#10095;</a>
-                                    <div class="caption-container">
-                                        <p id="caption"></p>
-                                    </div>
-                                </div>
-                                <div class="space"></div>
                             </div>
                         </div> 
 
@@ -843,37 +824,9 @@
                         }
                     });
                 }
-                var slideIndex = 1;
-                showSlides(slideIndex);
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
-                function showSlides(n) {
-                    var i;
-                    var slides= document.getElementsByClassName("slides1");
-                    var dots= document.getElementsByClassName("demo");
-                    var captionText= document.getElementById("caption");
-                    if (n > slides.length)
-                        slideIndex = 1;
-                    if (n < 1)
-                        slideIndex = slides.length;
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex-1].style.display = "block";
-                    dots[slideIndex-1].className += " active";
-                    captionText.innerHTML = dots[slideIndex-1].alt;
-                }
-				
+                
 				var slideIndex = 0;
 				showSlides();
-
 				function showSlides() {
 					var i;
 					var slides = document.getElementsByClassName("mySlides");
@@ -883,7 +836,7 @@
 					slideIndex++;
 					if (slideIndex > slides.length) {slideIndex = 1}    
 					slides[slideIndex-1].style.display = "block";  
-					setTimeout(showSlides, 10000); // Change image every 2 seconds
+					setTimeout(showSlides, 10000);
 				}
             </script>
         </div>

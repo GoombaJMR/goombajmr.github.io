@@ -8,7 +8,7 @@
     font-family: Helvetica;
 
 }
-.slideShow {
+.slideShow, .slideShow2 {
 	position: relative;
 	margin: auto;
 }
@@ -18,14 +18,14 @@
 	animation-name: fade;
 	animation-duration: 5s;
 }
-.slideShow img {
+.slideShow img, .slideShow2 img {
 	-o-object-fit: cover;
 	object-fit: cover;
 	overflow: hidden;
 	height: 50%;
 	opacity: 0.5;
 }
-.slideShow img:hover {
+.slideShow img:hover, slideShow2 img:hover {
 	opacity: 0.85;
 	-webkit-animation-name: fade-in;
 	-webkit-animation-duration: 2s;
@@ -33,7 +33,7 @@
 	animation-duration: 2s;
 }
 .stop {
-	height: 480px;
+
 	width: 100%;
 }
 .headerContainer {
@@ -55,7 +55,7 @@
 	-webkit-transition: opacity 1.5s linear;
     font-size: 60px;
 }
-.cen:hover {
+.cen:hover, .cen-down:hover {
 	visibility: hidden;
 	-webkit-visibility: hidden;
     opacity: 0;
@@ -67,6 +67,13 @@
 	top: 70%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	
+	visibility: visible;
+	-webkit-visibility: visible;
+    opacity: 1;
+    transition: opacity 1.5s linear;
+	-webkit-transition: opacity 1.5s linear;
 }
 
 @-webkit-keyframes fade {
@@ -381,6 +388,9 @@ ul li:before {
     text-align: left;
     outline: none;
     font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display:block;
 }
 .collapsible:hover {
     background-color: #A6DB3B;
