@@ -1,5 +1,9 @@
-This website is currently incomplete.
+The website is pretty much complete at this point!
 
-I will continue working on this website after I return to Los Angeles on the 4th of September.
-
-Until then, please understand ;)
+The only changes I might make in the future are things like...
+  Course information
+  Visuals & Animations w/ JavaScript
+  Maybe a blog page
+  GPA updates and other information updates (particularly projects)
+  
+Please enjoy the website, and if you have any questions or constructive criticism, please feel free to message me!
