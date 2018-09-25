@@ -119,6 +119,9 @@
 .trans p:hover {
     font-size: 30px;
 }
+.www { 
+	color: beige;
+}
 .transPad {
     padding: 10%;
 }
