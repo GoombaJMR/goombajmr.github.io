@@ -16,16 +16,18 @@
 .oppo {width: 35.5%; background-color: darkmagenta;}
 .spd {width: 99%; background-color: coral;}
 
-.cpp {width: 85%; background-color: #004589;}
-.python {width: 75%; background-color: #2F7CC7;}
-.c{width: 70%; background-color: darkblue;}
-.html {width: 70%; background-color: orangered;}
-.css {width: 70%; background-color: cornflowerblue;}
-.js {width: 60%; background-color: #E78C00;}
+.cpp {width: 90%; background-color: #004589;}
+.python {width: 85%; background-color: #2F7CC7;}
+.c{width: 65%; background-color: darkblue;}
+.c#{width: 75%; background-color: #86EAE7;}
+.html {width: 75%; background-color: orangered;}
+.css {width: 75%; background-color: cornflowerblue;}
+.js {width: 65%; background-color: #E78C00;}
+.lua {width: 75%; background-color: #1DACD6;}
 .unix {width: 60%; background-color: darkgreen;}
-.bash {width: 55%; background-color: darkmagenta;}
-.php {width: 50%; background-color: deeppink;}
-.react {width: 40%; background-color: darkcyan; }
+.bash {width: 50%; background-color: darkmagenta;}
+.php {width: 60%; background-color: deeppink;}
+.react {width: 50%; background-color: darkcyan; }
 
 .ios-progress {width: 30%; background-color: #000787; }
 .ios-difficulty {width: 60%; background-color: #950714; }
