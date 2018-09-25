@@ -11,6 +11,10 @@
 .gpa {width: 84.5%; background-color: royalblue;}
 .kas {width: 95%; background-color: #DF2020;}
 
+.checked {
+	color: orangered;
+}
+
 .rating {width: 98%; background-color: forestgreen;}
 .sesh {width: 100%; background-color: darkslateblue;}
 .oppo {width: 35.5%; background-color: darkmagenta;}
