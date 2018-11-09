@@ -127,7 +127,7 @@
 }
 .navbar {
     overflow: hidden;
-    background-color: black;
+    background-color: #222222;
     position: fixed;
     top: 0;
     width: 100%;
@@ -135,17 +135,18 @@
     justify-content: center;
     z-index: 2;
 }
-.navbar a, button {
+.navbar a {
     float: left;
     display: inline-block;
     color: #f2f2f2;
-	background-color: black;
+	background-color: #222222;
     text-align: center;
     padding: 15px 30px;
     margin: 0px 10px;
     font-size: 20px;
     text-decoration: none;
-	border: 1px solid black;
+	border: 2px solid #222222;
+	border-radius: 40px;
 }
 
 .navbar a:hover {
@@ -159,7 +160,7 @@
     margin-top: 30px;
 }
 .back0 {
-    background-color: black;
+    background-color: #222222;
 }
 .back1 {
     background-color: #606060;
@@ -195,7 +196,7 @@
     clear: both;
 }
 .card {
-    background-color: #222132;
+    background-color: #2B0000;
     padding: 4% 7%;
     margin: 15px;
     overflow: hidden;
@@ -300,7 +301,7 @@ p {
 	font-weight: 100;
 }
 .paragraph p {
-    line-height: 40px;
+    line-height: 30px;
 }
 h1 {
     color: #FFFFFF;
@@ -658,10 +659,9 @@ a:active.site-button { background-color: #F0F0F0; }
 }
 .email {
     color: black; 
-    padding: 8px 13px 8px 13px; 
-    margin: 5px; 
+    padding: 4px 6.5px 4px 6.5px; 
     background-color: white;
-    border-bottom: 8px solid #57A5C4;
+    border-bottom: 4px solid #57A5C4;
     border-radius: 20px;
     text-decoration: none;
 }
@@ -671,7 +671,7 @@ a:active.site-button { background-color: #F0F0F0; }
 }
 .email:active {
     background-color: #57A5C4;
-    border-bottom: 8px solid #FFFFFF;
+    border-bottom: 4px solid #FFFFFF;
     color: white;
 }
 
@@ -715,12 +715,20 @@ a:active.site-button { background-color: #F0F0F0; }
 	text-align: center; 
 	display:block; 
 	padding: 15px; 
-	background-color: white;
-	color: black;
-	width: 80%; 
+	background-color: #EEEEEE;
+	color: #222222;
+	width: 50%; 
 	border-radius: 50px; 
 	margin-left: auto; 
 	margin-right: auto;
+}
+.checkMeOut a {
+	line-height: 50px;
+}
+
+.checkMeOut:hover {
+	background-color: #333333;
+	color: #EEEEEE;
 }
 
 .codingSchoolDisplay {
