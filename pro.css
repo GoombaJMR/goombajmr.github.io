@@ -8,11 +8,11 @@
     width: 100%;
     background-color: #333333;
 }
-.gpa {width: 84.5%; background-color: royalblue;}
+.gpa {width: 85%; background-color: royalblue;}
 .kas {width: 95%; background-color: #DF2020;}
 
 .checked {
-	color: orangered;
+	color: limegreen;
 }
 
 .rating {width: 98%; background-color: forestgreen;}
@@ -34,20 +34,24 @@
 .react {width: 50%; background-color: darkcyan; }
 .lisp {width: 40%; background-color: darkred;}
 
-.lc-progress {width: 15%; background-color: #000787; }
-.lc-difficulty {width: 50%; background-color: #950714; }
-.lc-hours {width: 10%; background-color: #008000; }
-.lc-priority {width: 70%; background-color: #D4720E; }
+.lc-progress {width: 60%; background-color: #000787; }
+.lc-difficulty {width: 75%; background-color: #950714; }
+.lc-hours {width: 35%; background-color: #008000; }
+.lc-priority {width: 60%; background-color: #D4720E; }
 
-.ios-progress {width: 30%; background-color: #000787; }
-.ios-difficulty {width: 70%; background-color: #950714; }
-.ios-hours {width: 23%; background-color: #008000; }
-.ios-priority {width: 85%; background-color: #D4720E; }
+.ios-progress {width: 35%; background-color: #000787; }
+.ios-difficulty {width: 65%; background-color: #950714; }
+.ios-hours {width: 30%; background-color: #008000; }
+.ios-priority {width: 80%; background-color: #D4720E; }
 
-.gm2-progress {width: 15%; background-color: #000787; }
-.gm2-difficulty {width: 85%; background-color: #950714; }
-.gm2-hours {width: 33%; background-color: #008000; }
-.gm2-priority {width: 85%; background-color: #D4720E; }
+.gm2-progress {width: 20%; background-color: #000787; }
+.gm2-difficulty {width: 90%; background-color: #950714; }
+.gm2-hours {width: 45%; background-color: #008000; }
+.gm2-priority {width: 100%; background-color: #D4720E; }
+
+.eos-progress {width: 100%; background-color: #000787; }
+.eos-difficulty {width: 70%; background-color: #950714; }
+.eos-hours {width: 30%; background-color: #008000; }
 
 .rr-progress {width: 100%; background-color: #000787; }
 .rr-difficulty {width: 65%; background-color: #950714; }
