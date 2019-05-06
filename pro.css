@@ -44,10 +44,14 @@
 .ios-hours {width: 30%; background-color: #008000; }
 .ios-priority {width: 80%; background-color: #D4720E; }
 
-.gm2-progress {width: 20%; background-color: #000787; }
+.gm2-progress {width: 15%; background-color: #000787; }
 .gm2-difficulty {width: 90%; background-color: #950714; }
-.gm2-hours {width: 45%; background-color: #008000; }
+.gm2-hours {width: 65%; background-color: #008000; }
 .gm2-priority {width: 100%; background-color: #D4720E; }
+
+.bst-progress {width: 100%; background-color: #000787; }
+.bst-difficulty {width: 60%; background-color: #950714; }
+.bst-hours {width: 36%; background-color: #008000; }
 
 .eos-progress {width: 100%; background-color: #000787; }
 .eos-difficulty {width: 70%; background-color: #950714; }
@@ -55,7 +59,7 @@
 
 .rr-progress {width: 100%; background-color: #000787; }
 .rr-difficulty {width: 65%; background-color: #950714; }
-.rr-hours {width: 97%; background-color: #008000; }
+.rr-hours {width: 85%; background-color: #008000; }
 
 .hfc-progress {width: 100%; background-color: #000787; }
 .hfc-difficulty {width: 50%; background-color: #950714; }

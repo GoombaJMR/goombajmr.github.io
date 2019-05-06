@@ -127,7 +127,7 @@
 }
 .navbar {
     overflow: hidden;
-    background-color: #222222;
+    background-color: #000111;
     position: fixed;
     top: 0;
     width: 100%;
@@ -139,13 +139,13 @@
     float: left;
     display: inline-block;
     color: #f2f2f2;
-	background-color: #222222;
+	background-color: #000111;
     text-align: center;
     padding: 15px 30px;
     margin: 0px 10px;
     font-size: 20px;
     text-decoration: none;
-	border: 2px solid #222222;
+	border: 2px solid #000111;
 	border-radius: 40px;
 }
 
@@ -160,7 +160,7 @@
     margin-top: 30px;
 }
 .back0 {
-    background-color: #222222;
+    background-color: #000111;
 }
 .back1 {
     background-color: #606060;
@@ -196,7 +196,7 @@
     clear: both;
 }
 .card {
-    background-color: #111111;
+    background-color: #000000;
     padding: 4% 7%;
     margin: 15px;
     overflow: hidden;
@@ -257,11 +257,11 @@ button {
 }
 .column {
     float: left;
-    width: 50%;
+    width: 33.3%;
     padding: 15px;
 }
 .shadow {
-    background-color: #333343;
+    background-color: #111111;
     text-align: center;
     padding: 17.5px;
 }
@@ -332,9 +332,17 @@ tr:first-child { background: #222 }
 .center {
     text-align: center;
 }
-#overallPadding {
-    padding: 2.5% 5%;
-    margin: 4% 8%;
+@media only screen and (min-width: 992px) {
+  .overallPadding {
+      padding: 2.5% 5%;
+      margin: 4% 8%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .overallPadding {
+      padding: 0.5% 1%;
+      margin: 1% 2%;
+  }
 }
 #home {
 
@@ -543,15 +551,38 @@ a:active.site-button { background-color: #F0F0F0; }
 }
 .flip {
     background-color: transparent;
-    width: 50%;
-    height: 400px;
+    width: 33.3%;
+    height: 350px;
     perspective: 1000px;
 	-webkit-perspective: 1000px;
     float: left;
 }
+.flip p {
+  font-size: 16px;
+}
+.flip h4 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #7E1B9D;
+}
+._title {
+  background-color: rgba(255,255,255,0.90); 
+  padding: 18px; 
+  font-style: italic;
+  color: black; 
+  font-weight: bold;
+  margin-top: 50%;
+}
+._done {
+  background-color: rgba(255,255,255,0.90); 
+  padding: 18px; 
+  font-style: italic;
+  color: white; 
+  margin-top: 50%;
+}
 .flip a {
 	color: #7E1B9D;
-	font-size: 18px;
+	font-size: 14px;
 	text-decoration: none;
 	padding: 10px;
 	border-radius: 20px;
@@ -591,7 +622,7 @@ a:active.site-button { background-color: #F0F0F0; }
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-	border: 12px solid black;
+	border: 3px solid #7E1B9D;
 
 }
 .flip-back {
