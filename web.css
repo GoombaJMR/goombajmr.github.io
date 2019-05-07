@@ -5,9 +5,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    font-family: Helvetica;
+    font-family: 'M PLUS Rounded 1c', Helvetica;
 
 }
+
+
+
 .slideShow, .slideShow2 {
 	position: relative;
 	margin: auto;
@@ -127,7 +130,7 @@
 }
 .navbar {
     overflow: hidden;
-    background-color: #000111;
+    background-color: #161616;
     position: fixed;
     top: 0;
     width: 100%;
@@ -139,14 +142,14 @@
     float: left;
     display: inline-block;
     color: #f2f2f2;
-	background-color: #000111;
+	background-color: #161616;
     text-align: center;
     padding: 15px 30px;
     margin: 0px 10px;
     font-size: 20px;
     text-decoration: none;
-	border: 2px solid #000111;
-	border-radius: 40px;
+	border: 2px solid #161616;
+	border-radius: 25px;
 }
 
 .navbar a:hover {
@@ -160,7 +163,7 @@
     margin-top: 30px;
 }
 .back0 {
-    background-color: #000111;
+    background-color: #090909;
 }
 .back1 {
     background-color: #606060;
@@ -197,58 +200,51 @@
 }
 .card {
     background-color: #000000;
-    padding: 4% 7%;
-    margin: 15px;
+    padding: 1.8% 7%;
+    margin: 5px;
     overflow: hidden;
+		border: 5px solid #DDDDDD;
+		border-radius: 25px;
 }
 .tab {
-    overflow: hidden;
-
-    background-color: #424;
-    text-align: center;
-    margin-left: -5%;
-    margin-right: -5%;
+	overflow: hidden;
+	background-color: #CD1076;
+	text-align: center;
 	display: flex;
 	justify-content: center;
 }
-.tab:hover {
-	background-color: #DEDEFF;
-}
-.tab:hover button {
-	color: black;
-}
+
 .tab button {
-    background-color: inherit;
-    color: #DEDEFF;
+	background-color: inherit;
+	color: #DDDDDD;
 	border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 6px 6px;
+	outline: none;
+	cursor: pointer;
+	padding: 3px 4px;
 	margin-left: auto;
 	margin-right: auto;
-    font-weight: 500;
-    font-size: 20px;
-    transition: 0.5s;
+	font-weight: 500;
+	font-size: 20px;
+	transition: 1s;
 }
 .tab button:hover {
-    background-color: #DEDEFF;
-    color: #FF6600;
+    background-color: #DDDDDD;
+    color: #CD1076;
     font-weight: 500;
 }
 .tab button.active {
 	font-weight: 500;
-    background-color: #DEDEFF;
-    color: #333;
+    background-color: #DDDDDD;
+    color: #CD1076;
 }
 .tabcontent {
     display: none;
     padding: 10px 10px;
-
     border-top: none;
     margin: 0% -5%;
 }
 button {
-    font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
+    font-family: 'M PLUS Rounded 1c', "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
 }
 @media screen and (max-width: 600px) {
     .column {
@@ -259,11 +255,6 @@ button {
     float: left;
     width: 33.3%;
     padding: 15px;
-}
-.shadow {
-    background-color: #111111;
-    text-align: center;
-    padding: 17.5px;
 }
 .pad {
     padding: 10px 20px;
@@ -287,29 +278,26 @@ button {
     color: #FBFBFB;
 }
 .FontThin {
-    font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
-}
-.FontThinner {
-    font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
+    font-family: 'M PLUS Rounded 1c', "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
 }
 p {
     font-size: 20px;
-    font-family: "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
+    font-family: 'M PLUS Rounded 1c', "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
     color: #FBFBFB;
 	letter-spacing: -0.5px;
 	word-spacing: -1.5px;
 	font-weight: 100;
 }
 .paragraph p {
-    line-height: 30px;
+    line-height: 25px;
 }
 h1 {
     color: #FFFFFF;
-    font-family: Verdana;
+    font-family: 'M PLUS Rounded 1c', Verdana;
 }
 h2 {
     color: #FBFBFB;
-    font-family: Helvetica;
+    font-family: 'M PLUS Rounded 1c', Helvetica;
 }
 table {
     table-layout: fixed;
@@ -319,23 +307,24 @@ th, td {
     color: #FBFBFB;
     text-align: left;
     padding: 7.5px;
+	border-radius: 15px;
 }
 th {
-    font-size: 24px;
+  font-size: 20px;
 }
 td {
-    font-size: 20px;
+  font-size: 18px;
 }   
-tr:nth-child(even) {background: #444}
-tr:nth-child(odd) {background: #333}
-tr:first-child { background: #222 }
+tr:nth-child(even) {background: #080808}
+tr:nth-child(odd) {background: #0D0D0D}
+tr:first-child { background: #040404 }
 .center {
     text-align: center;
 }
 @media only screen and (min-width: 992px) {
   .overallPadding {
-      padding: 2.5% 5%;
-      margin: 4% 8%;
+      padding: 2.2% 4.5%;
+      margin: 3% 5%;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -552,10 +541,11 @@ a:active.site-button { background-color: #F0F0F0; }
 .flip {
     background-color: transparent;
     width: 33.3%;
-    height: 350px;
+    height: 300px;
     perspective: 1000px;
 	-webkit-perspective: 1000px;
     float: left;
+		padding: 5px;
 }
 .flip p {
   font-size: 16px;
@@ -563,22 +553,22 @@ a:active.site-button { background-color: #F0F0F0; }
 .flip h4 {
   font-size: 20px;
   font-weight: 400;
-  color: #7E1B9D;
+  color: #161616;
 }
 ._title {
   background-color: rgba(255,255,255,0.90); 
-  padding: 18px; 
+  padding: 10px; 
   font-style: italic;
   color: black; 
   font-weight: bold;
-  margin-top: 50%;
+  margin-top: 22.5%;
 }
 ._done {
   background-color: rgba(255,255,255,0.90); 
-  padding: 18px; 
+  padding: 10px; 
   font-style: italic;
   color: white; 
-  margin-top: 50%;
+  margin-top: 22.5%;
 }
 .flip a {
 	color: #7E1B9D;
@@ -614,7 +604,9 @@ a:active.site-button { background-color: #F0F0F0; }
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-	-webkit-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		border: 3px solid #EEEEEE;
+		border-radius: 35px;
 }
 .flip-front {
     background-color: #444;
@@ -622,22 +614,26 @@ a:active.site-button { background-color: #F0F0F0; }
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-	border: 3px solid #7E1B9D;
+		
 
 }
 .flip-back {
     color: white;
-    background-color: #7E1B9D;
+    background-color: #151515;
     transform: rotateX(-180deg);
-	-webkit-transform: rotateX(-180deg)
+		-webkit-transform: rotateX(-180deg);
+		line-height: 1;
+}
+.flip-back p {
+	font-size: 14px;
 }
 
 .a {
-    background-color: #71188D;
+    background-color: #080808;
     text-align: center;
 }
 .a:hover {
-    background-color: #A45FBA;
+    background-color: #161616;
 }
 .a a {
     color: white;
@@ -645,17 +641,17 @@ a:active.site-button { background-color: #F0F0F0; }
     text-decoration: none;
 }
 .a a:hover {
-	color: gold;
+	color: #CD1076;
 }
 .b {
-    background-color: #58126D;
+    background-color: #161616;
     text-align: center;
 }
 .b:hover {
-    background-color: #8A31A6;
+    background-color: #080808;
 }
 .b a:hover {
-	color: gold;
+	color: #CD1076;
 }
 .b a {
     font-size: 18px;
@@ -689,16 +685,13 @@ a:active.site-button { background-color: #F0F0F0; }
 
 }
 .email {
-    color: black; 
-    padding: 4px 6.5px 4px 6.5px; 
-    background-color: white;
-    border-bottom: 4px solid #57A5C4;
-    border-radius: 20px;
+    color: red; 
+    border-bottom: 2px solid red;
     text-decoration: none;
 }
 .email:hover {
     background-color: #EEE;
-    color: #444;
+    color:red;
 }
 .email:active {
     background-color: #57A5C4;
@@ -813,4 +806,36 @@ a:active.site-button { background-color: #F0F0F0; }
 	margin-right: auto;
 	width: 30%;
 	text-align: center;
+}
+
+.img-center {
+	display: block; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.p-head {
+	padding: 1.5px 3px; 
+	background-color: green; 
+	margin-right: 5px; 
+	border-radius: 5px;
+}
+
+.kuribo-s {
+	text-align: center; 
+	max-width: 600px; 
+	margin-left: auto; 
+	margin-right: auto; 
+	display:block; 
+	background-color: #57A5C4; 
+	padding: 15px; 
+	border-radius: 30px;
+}
+
+.text-cen {
+	text-align: center; 
+	max-width: 500px; 
+	margin-left: auto; 
+	margin-right: auto; 
+	display: block;
 }

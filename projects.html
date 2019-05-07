@@ -1,6 +1,30 @@
+<!-- ******************************************************************
+		
+		Mr. or Ms. Visitor,
+
+		Welcome to my personal website! This is Julian here, and I am 
+		writing this to whoever has decided to view the page source and check
+		things out at a lower level. The code behind this site has been very
+		messy for the 9 months I have been running in (SEP - MAY 2019), but
+		I have decided to dedicate MAY 2019 to fixing up the code on the
+		site and making it look much cleaner. 
+
+		By the time you are reading this, there should be plenty of fixes;
+		navigating through the code should be pretty hassle free.
+
+		With that being said, check out my team's awesome game that is 
+		currently being developed here: www.projectsjk.co
+
+		Enjoy checking out the code,
+		Julian
+
+****************************************************************** -->
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Favicon -->
+		<link rel="icon" href="images/fv.png">
+		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126089412-1"></script>
 		<script>
@@ -11,26 +35,35 @@
 		  gtag('config', 'UA-126089412-1');
 		</script>
 		<title>Rice's Projects</title>
+		<link rel="stylesheet" href="web.css">
+		<link rel="stylesheet" href="pro.css">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300" rel="stylesheet">
 	</head>
-	<link rel="stylesheet" href="web.css">
-	<link rel="stylesheet" href="pro.css">
+	
 	<body class = "back0">
 		<div class = "navbar FontThin pad">
-            <a href = "index.html#home" onMouseOver="this.style.background ='#7AA328'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000111'; this.style.color = '#F2F2F2'">Home</a>
-            
-            <a href = "index.html#education" onMouseOver="this.style.background ='#FF6600'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000111'">Education</a>
-            
-            <a href = "index.html#work" onMouseOver="this.style.background ='#CC0953'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000111'; this.style.color = '#F2F2F2'">Work</a>
+      <!-- Home Button -->
+			<a href = "index.html#home" onMouseOver="this.style.background ='#555555'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#161616'; this.style.color = '#F2F2F2'">Home</a>
 
-            <a href = "index.html#proj" onMouseOver="this.style.background ='#7E1B9D'; this.style.color = '#FFFFFF'" onMouseOut="this.style.background='#000111'; this.style.color = '#F2F2F2'">Projects</a>
-            
-            <a href = "index.html#contact" onMouseOver="this.style.background ='#57A5C4'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#000111'; this.style.color = '#F2F2F2'">Contact</a>
-        </div>
+			<!-- Education Button -->
+			<a href = "index.html#education" onMouseOver="this.style.background ='#FF6600'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#161616'">Education</a>
+			
+			<!-- Work Button -->
+			<a href = "index.html#work" onMouseOver="this.style.background ='#CC0953'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#161616'; this.style.color = '#F2F2F2'">Work</a>
+
+			<!-- Projects Button -->
+			<a href = "index.html#proj" onMouseOver="this.style.background ='#7E1B9D'; this.style.color = '#FFFFFF'" onMouseOut="this.style.background='#161616'; this.style.color = '#F2F2F2'">Projects</a>
+
+			<!-- Contact Button -->
+			<a href = "index.html#contact" onMouseOver="this.style.background ='#57A5C4'; this.style.color = '#F2F2F2'" onMouseOut="this.style.background='#161616'; this.style.color = '#F2F2F2'">Contact</a>
+		</div>
         
-        <div class = "main">
-            <p style = "color: white; text-align: center;">Goomba! Kuribo! Keep Looking!</p>
-        </div>
-        <div id="home" class="slideShow2 headerContainer">
+		<div class = "main">
+			<p style = "color: white; text-align: center;">Goomba! Kuribo! Keep Looking!</p>
+		</div>
+		
+		<!-- Image Slideshow -->
+		<div id="home" class="slideShow2 headerContainer">
 			<div class="mySlides fade">
 				<img src="images/banners/s.jpg" style="width: 100%;">
 				<h1 class="cen">Julian M. Rice</h1>
@@ -62,39 +95,17 @@
 				<p class="cen-down">Microsoft Tiny House, UCLA</p>
 			</div>
 			<div class="mySlides fade">
-				<img src="images/banners/4.jpg" style="width: 100%;">
-				<h1 class="cen">Julian M. Rice</h1>
-				<p class="cen-down">SuperCoding, Palos Verdes</p>
-			</div>
-			<div class="mySlides fade">
 				<img src="images/banners/5.png" style="width: 100%;">
 				<h1 class="cen">Julian M. Rice</h1>
 				<p class="cen-down">Trials of Rice, Project</p>
 			</div>
-			<div class="mySlides fade">
-				<img src="images/banners/6.jpg" style="width: 100%;">
-				<h1 class="cen">Julian M. Rice</h1>
-				<p class="cen-down">Kushikatsu in Osaka</p>
-			</div>
-			<!--<div class="mySlides fade">
-				<img src="images/banners/1.jpg" style="width: 100%;">
-				<h1 class="cen">Julian M. Rice</h1>
-				<p class="cen-down">Shibuya, Tokyo</p>
-			</div>-->
-			<!--
-			<div class = "header" id = "home">
-				<div class = "trans transPad">
-					<h1 class = "lightFont headFont">Julian M. Rice</h1>
-				</div>
-			</div> -->
 		</div>
 		
 		<!-- Projects -->
-		<div id="overallPadding">
-		<div style="padding-top: 70px;">
+		<div class="overallPadding" style="padding-top: 70px;">
           
-            <!-- Project SJK -->
-			<div id="gm2s" class = "backPurple row FontThin lightFont">
+			<!-- Project SJK -->
+			<div id="gm2s" class = "row FontThin">
 				<div class = "card"> 
 					<div class="paragraph">
 						<div style="padding-top: 55px;"></div>
@@ -102,8 +113,13 @@
 						<div style="padding-top: 25px;"></div>
 						<img src="images/proj.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px;">
 						<p class="center">JUN 2018 - PRESENT</p>
-						<p style="text-align: justify;">Shujinkou is a 2D action JRPG platformer that facilitates Japanese learning while keeping the player engrossed in a tale of love, loyalty, and despair, as well as gameplay mechanics that have been built from the ground up. The intuitive controls, usage of Japanese in the in-game world, and multidimensional heroes and villains alike provide replayability and depth to a language learning game like never seen before.<br> <b><a href="index.html#contact" style="text-decoration: none; color: gold;">Contact Me</a></b> for code samples that have been created for this project.</p>
-						<a href="https://www.projectsjk.co"><img src="images/logo.png" alt="Shujinkou" width=50% style="margin-left: auto; margin-right: auto; display: block;"></a>
+						<p style="text-align: justify;">Shujinkou is a 2D action JRPG platformer that facilitates Japanese learning while keeping the player engrossed in a tale of love, loyalty, and despair, as well as gameplay mechanics that have been built from the ground up. The intuitive controls, usage of Japanese in the in-game world, and multidimensional heroes and villains alike provide replayability and depth to a language learning game like never seen before.<br></p>
+						<a href="https://www.projectsjk.co"><img src="images/logo.png" alt="Shujinkou" width=90% style="margin-left: auto; margin-right: auto; display: block;"></a>
+						
+						<h2 style="text-align: center;">CODE SAMPLES (C++)</h2>
+						<a href="https://github.com/JulianMichaelRice/Game-Scripting-Samples/blob/master/ShujinkouSampleScriptsC%2B%2B.gml"><img src="images/icons/github.png" class="img-center" width=200px></a>
+						<br>
+						
 						<div class="skill-container">
 							<div class="skills gm2-progress"><div style="text-align: left; float:left;">Progress</div>15%</div>
 							<div class="skills gm2-difficulty"><div style="text-align: left; float:left;">Difficulty</div>90%</div>
@@ -113,11 +129,9 @@
 					</div>
 				</div>
 			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
           
-            <!-- Beanstalk -->
-			<div id="bstalk" class = "backPurple row FontThin lightFont">
+			<!-- Beanstalk -->
+			<div id="bstalk" class = "row FontThin">
 				<div class = "card"> 
 					<div class="paragraph">
 						<div style="padding-top: 55px;"></div>
@@ -126,10 +140,9 @@
 						<img src="images/Cover.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px;">
 						<p class="center">DEC 2018 - JAN 2019</p>
 						<p style="text-align: justify;">This is a platformer game that randomly generates grass platforms as the beanstalk in the background grows. Your goal is to cut your way through the platforms and reach the top, while dealing with enemy flies and other obstructions.<br> 
-                          
-                        <br>
-                          <iframe frameborder="0" src="https://itch.io/embed/354480" width="552" height="167" style="margin-left: auto; margin-right: auto; display: block;"></iframe><br>
-                        <b><a href="index.html#contact" style="text-decoration: none; color: gold;">Contact Me</a></b> for code samples that have been created for this project.</p>
+						<br>
+							<iframe frameborder="0" src="https://itch.io/embed/354480" width="552" height="167" style="margin-left: auto; margin-right: auto; display: block;"></iframe><br>
+						<b><a href="index.html#contact" style="text-decoration: none; color: gold;">Contact Me</a></b> for code samples that have been created for this project.</p>
 						<div class="skill-container">
 							<div class="skills bst-progress"><div style="text-align: left; float:left;">Progress</div>100%</div>
 							<div class="skills bst-difficulty"><div style="text-align: left; float:left;">Difficulty</div>60%</div>
@@ -138,82 +151,9 @@
 					</div>
 				</div>
 			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
-          
-            <!-- Element of Surprise -->
-			<div id="eos" class = "backPurple row FontThin lightFont">
-				<div class = "card"> 
-					<div class="paragraph">
-						<div style="padding-top: 55px;"></div>
-							<h1 class="center">Element of Surprise</h1>
-						<div style="padding-top: 25px;"></div>
-						<img src="images/gp1.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px;">
-						<p class="center">OCT 2018 - DEC 2018</p>
-                        <p style="text-align: justify;">Element of Surprise is a game where two players try to reveal each other's type and take advantage of that information to try to take their opponent's HP down to 0. Outside of types, there are unique critical and block failure rates for FOUR different classes in the game, along with options to heal, block, and swap one's type. Each player starts with 100 HP and has an elemental type and physical class that they have chosen.</p>
-                      <p><a href="https://github.com/JulianMichaelRice/Element-of-Surprise" style="color: red; text-decoration: none; font-size: 0.9em; padding-top:-4px;">Github Source Files</a></p>
-                      <div style="display: inline-block; margin-left: auto; margin-right: auto;">
-                        <img src="images/gp2.png" width=49.5%>
-                        <img src="images/gp3.png" width=49.5%>
-                      </div>
-                      <br>
-						<div class="skill-container">
-							<div class="skills eos-progress"><div style="text-align: left; float:left;">Progress</div>100%</div>
-							<div class="skills eos-difficulty"><div style="text-align: left; float:left;">Difficulty</div>70%</div>
-							<div class="skills eos-hours"><div style="text-align: left; float:left;">Hours</div>40</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
-			
-			<!-- LEX -->
-			<div id="lc" class = "backPurple row FontThin lightFont">
-				<div class = "card"> 
-					<div class="paragraph">
-						<div style="padding-top: 55px;"></div>
-							<h1 class="center">LEX</h1>
-						<div style="padding-top: 25px;"></div>
-						<img src="images/wip2sq.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px; border-radius: 100%;">
-						<p class="center">OCT 2018 - PRESENT</p>
-						<p style="text-align: justify;">I am working with a team of UCLA students on a language exchange platform that will have a more simplified and accessible UI. I am focusing more on the front end, which includes designing and developing the website. I am also working on some of the backend, including Django server management. More details will come soon :).</p>
-						<div class="skill-container">
-							<div class="skills lc-progress"><div style="text-align: left; float:left;">Progress</div>60%</div>
-							<div class="skills lc-difficulty"><div style="text-align: left; float:left;">Difficulty</div>75%</div>
-							<div class="skills lc-hours"><div style="text-align: left; float:left;">Hours</div>50</div>
-							<div class="skills lc-priority"><div style="text-align: left; float:left;">Priority</div>60%</div>	
-                        </div>
-					</div>
-				</div>
-			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
-			
-			<!-- iOS Application -->
-			<div id="ios" class = "backPurple row FontThin lightFont">
-				<div class = "card"> 
-					<div class="paragraph">
-						<div style="padding-top: 55px;"></div>
-							<h1 class="center">iOS Application</h1>
-						<div style="padding-top: 25px;"></div>
-						<img src="images/reactnative.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px; border-radius: 0;">
-						<p class="center">AUG 2018 - PRESENT</p>
-						<p style="text-align: justify;">I'm working on an app using React Native. That's all I <i>can</i> say for now, but I'll definitely be updating this with more details come maybe... October or November!</p>
-						<div class="skill-container">
-							<div class="skills ios-progress"><div style="text-align: left; float:left;">Progress</div>35%</div>
-							<div class="skills ios-difficulty"><div style="text-align: left; float:left;">Difficulty</div>65%</div>
-							<div class="skills ios-hours"><div style="text-align: left; float:left;">Hours</div>40</div>
-							<div class="skills ios-priority"><div style="text-align: left; float:left;">Priority</div>80%</div>	
-                        </div>
-					</div>
-				</div>
-			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
 			
 			<!-- Rotor Router -->
-			<div id="rr" class = "backPurple row FontThin lightFont">
+			<div id="rr" class = "row FontThin">
 				<div class = "card"> 
 					<div class="paragraph">
 						<div style="padding-top: 55px;"></div>
@@ -221,7 +161,21 @@
 						<div style="padding-top: 25px;"></div>
 						<img src="images/rr/rr-m-i.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px;">
 						<p class="center">JUN 2018 - AUG 2018</p>
-						<p class="justify">When we send out a little memoryless bot to go explore a graph, how do we give the bot instructions so that it can perpetually navigate through every vertex and edge in a graph effectively? The rotor router model seemed to be a great solution, and had been researched to some extent in regards to lower, upper bounds and flaws, but little mention of real experiments and simulations performed on the model with actual graphs. I decided to create the first simulator for the rotor router algorithm that <b><i>specifically</i></b> looks for the average stabilization period of a mobile bot in a graph. In layman's terms, the bot will magically start traveling through a path in the graph that will loop forever. We want to find what this path (is it <span style="color: pink;">AB->BD->DA->AB</span>, or something else, for example?) and how long it takes to start on that path - the stabilization period (counted in steps, or movements by the bot). You can read more about my analysis of my simulation results and improvements to the original rotor router mechanism in my paper <a href="rr.pdf" style="text-decoration: none; color: aqua;">here</a>.</p>
+						<p class="justify">When we send out a little memoryless bot to go explore a graph, how do we give the bot instructions so that it can perpetually navigate through every vertex and edge in a graph effectively? The rotor router model seemed to be a great solution, and had been researched to some extent in regards to lower, upper bounds and flaws, but little mention of real experiments and simulations performed on the model with actual graphs. I decided to create the first simulator for the rotor router algorithm that <b><i>specifically</i></b> looks for the average stabilization period of a mobile bot in a graph. In layman's terms, the bot will magically start traveling through a path in the graph that will loop forever. We want to find what this path (is it <span style="color: pink;">AB->BD->DA->AB</span>, or something else, for example?) and how long it takes to start on that path - the stabilization period (counted in steps, or movements by the bot).</p>
+						
+						<h2 style="text-align: center;">Final Presentation</h2>
+						<embed src="files/rotor-router-mechanism-presentation.pdf" width=640 height=420 type="application/pdf" class="img-center">
+						
+						<h2 style="text-align: center;">Midpoint Presentation</h2>
+						<embed src="files/rotor-router-mechanism-midpoint.pdf" width=640 height=420 type="application/pdf" class="img-center">
+						
+						<h2 style="text-align: center;">Final Report</h2>
+						<embed src="files/rotor-router-mechanism-paper.pdf" width=640 height=720 type="application/pdf" class="img-center">
+						
+						<h2 style="text-align: center;">SIMULATOR &amp; REPORT (C++)</h2>
+						<a href="https://github.com/JulianMichaelRice/Rotor-Router-Experiment"><img src="images/icons/github.png" class="img-center" width=200px></a>
+						<br>
+						
 						<div class="skill-container">
 							<div class="skills rr-progress"><div style="text-align: left; float:left;">Progress</div>100%</div>
 							<div class="skills rr-difficulty"><div style="text-align: left; float:left;">Difficulty</div>65%</div>
@@ -230,11 +184,39 @@
 					</div>
 				</div>
 			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
+			
+			<!-- Element of Surprise -->
+			<div id="eos" class = "row FontThin">
+				<div class = "card"> 
+					<div class="paragraph">
+						<div style="padding-top: 55px;"></div>
+						<h1 class="center">Element of Surprise</h1>
+						<div style="padding-top: 25px;"></div>
+						<img src="images/gp1.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px;">
+						<p class="center">OCT 2018 - DEC 2018</p>
+						<p style="text-align: justify;">Element of Surprise is a game where two players try to reveal each other's type and take advantage of that information to try to take their opponent's HP down to 0. Outside of types, there are unique critical and block failure rates for FOUR different classes in the game, along with options to heal, block, and swap one's type. Each player starts with 100 HP and has an elemental type and physical class that they have chosen.</p>
+						<p><a href="https://github.com/JulianMichaelRice/Element-of-Surprise" style="color: red; text-decoration: none; font-size: 0.9em; padding-top:-4px;">Github Source Files</a></p>
+						<div style="display: inline-block; margin-left: auto; margin-right: auto;">
+							<img src="images/gp2.png" width=49.5%>
+							<img src="images/gp3.png" width=49.5%>
+						</div>
+						<br>
+						
+						<h2 style="text-align: center;">SOURCE CODE (Python)</h2>
+						<a href="https://github.com/JulianMichaelRice/Element-of-Surprise"><img src="images/icons/github.png" class="img-center" width=200px></a>
+						<br>
+						
+						<div class="skill-container">
+							<div class="skills eos-progress"><div style="text-align: left; float:left;">Progress</div>100%</div>
+							<div class="skills eos-difficulty"><div style="text-align: left; float:left;">Difficulty</div>70%</div>
+							<div class="skills eos-hours"><div style="text-align: left; float:left;">Hours</div>40</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			
 			<!-- How Far Can You Go? -->
-			<div id="hfcyg" class = "backPurple row FontThin lightFont">
+			<div id="hfcyg" class = "row FontThin">
 				<div class = "card"> 
 					<div class="paragraph">
 						<div style="padding-top: 55px;"></div>
@@ -251,11 +233,9 @@
 					</div>
 				</div>
 			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
 			
 			<!-- HiTechAccounting Website -->
-			<div id="ht" class = "backPurple row FontThin lightFont">
+			<div id="ht" class = "row FontThin">
 				<div class = "card"> 
 					<div class="paragraph">
 						<div style="padding-top: 55px;"></div>
@@ -272,11 +252,9 @@
 					</div>
 				</div>
 			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
-			
+
 			<!-- Trials of Rice -->
-			<div id="tor" class = "backPurple row FontThin lightFont">
+			<div id="tor" class = "row FontThin">
 				<div class = "card"> 
 					<div class="paragraph">
 						<div style="padding-top: 55px;"></div>
@@ -294,11 +272,9 @@
 					</div>
 				</div>
 			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
 			
 			<!-- Bandcamp -->
-			<div id="bc" class = "backPurple row FontThin lightFont">
+			<div id="bc" class = "row FontThin">
 				<div class = "card"> 
 					<div class="paragraph">
 						<div style="padding-top: 55px;"></div>
@@ -316,11 +292,9 @@
 					</div>
 				</div>
 			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
 			
 			<!-- Optimal Angle -->
-			<div id="cam" class = "backPurple row FontThin lightFont">
+			<div id="cam" class = "row FontThin">
 				<div class = "card"> 
 					<div class="paragraph">
 						<div style="padding-top: 55px;"></div>
@@ -328,7 +302,7 @@
 						<div style="padding-top: 25px;"></div>
 						<img src="images/optimal-angle-i.png" class="profImg" style="margin-left: auto; margin-right: auto; display: block; width: 220px;">
 						<p class="center">SEP 2015 - MAY 2016</p>
-						<p class="justify">I wrote a 19 page paper during my senior year of high school about calculating the optimal camera angle in Super Mario 64. You can read it <a href="camera.pdf" style="text-decoration: none; color: aqua;">here</a>. I got to recreate a scene from Super Mario 64 through Unity and perform a ton of calculations that have to do with vectors to get the answer I needed. I thought this was a really fun experience, and it made me appreciate one of my favorite games of all time <i>just</i> a bit more ;&#41;</p>
+						<p class="justify">I wrote a 19 page paper during my senior year of high school about calculating the optimal camera angle in Super Mario 64. You can read it <a href="files/camera.pdf" style="text-decoration: none; color: aqua;">here</a>. I got to recreate a scene from Super Mario 64 through Unity and perform a ton of calculations that have to do with vectors to get the answer I needed. I thought this was a really fun experience, and it made me appreciate one of my favorite games of all time <i>just</i> a bit more ;&#41;</p>
 						<div class="skill-container">
 							<div class="skills cam-progress"><div style="text-align: left; float:left;">Progress</div>100%</div>
 							<div class="skills cam-difficulty"><div style="text-align: left; float:left;">Difficulty</div>40%</div>
@@ -337,9 +311,6 @@
 					</div>
 				</div>
 			</div>
-			</div>
-			<div class ="shadow"></div>
-			<div class="space"></div>
 			
 		</div>
 		<script>

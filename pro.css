@@ -12,7 +12,7 @@
 .kas {width: 95%; background-color: #DF2020;}
 
 .checked {
-	color: limegreen;
+	color: #CD1076;
 }
 
 .rating {width: 98%; background-color: forestgreen;}
@@ -21,13 +21,13 @@
 .spd {width: 99%; background-color: coral;}
 
 .cpp {width: 90%; background-color: #004589;}
-.python {width: 85%; background-color: #F1A907;}
-.c{width: 65%; background-color: darkblue;}
-.cS{width: 75%; background-color: #202087;}
-.html {width: 75%; background-color: orangered;}
-.css {width: 75%; background-color: cornflowerblue;}
+.python {width: 90%; background-color: #F1A907;}
+.c{width: 60%; background-color: darkblue;}
+.cS{width: 80%; background-color: #202087;}
+.html {width: 70%; background-color: orangered;}
+.css {width: 70%; background-color: cornflowerblue;}
 .js {width: 65%; background-color: #E78C00;}
-.lua {width: 75%; background-color: #1DACD6;}
+.lua {width: 70%; background-color: #1DACD6;}
 .unix {width: 60%; background-color: darkgreen;}
 .bash {width: 50%; background-color: darkmagenta;}
 .php {width: 60%; background-color: deeppink;}
