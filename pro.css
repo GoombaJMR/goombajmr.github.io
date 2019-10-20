@@ -15,6 +15,13 @@
 	color: #CD1076;
 }
 
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position:absolute;
+  right: 0;
+  bottom: 0;
+}
+
 .rating {width: 98%; background-color: forestgreen;}
 .sesh {width: 100%; background-color: darkslateblue;}
 .oppo {width: 35.5%; background-color: darkmagenta;}
