@@ -842,3 +842,7 @@ a:active.site-button { background-color: #F0F0F0; }
 	margin-right: auto; 
 	display: block;
 }
+
+.progress-ring__circle {
+  stroke-dasharray: 10 20;
+}
