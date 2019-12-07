@@ -249,6 +249,18 @@ html {
 button {
     font-family: 'M PLUS Rounded 1c', "PT-Sans", Helvetica, Verdana, Arial, sans-serif;
 }
+a {
+	color: red;
+	text-decoration: none;
+}
+.excerpt {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #4b1010;
+	padding: 5px 35px 10px 35px;
+	border-radius: 10px;
+}
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
@@ -261,6 +273,18 @@ button {
 		-webkit-perspective: 1000px;
 		float: left;
 		padding: 5px;
+	}
+	.skill-item {
+		width: 35%;
+	}
+	.proj-img {
+		width: 100%;
+	}
+	.proj-vid {
+		width: 100%;
+	}
+	.home-img {
+		width: 90%;
 	}
 }
 @media screen and (min-width: 600px) {
@@ -276,6 +300,24 @@ button {
 		float: left;
 		padding: 5px;
 	}
+	.proj-img {
+		width: 49%;
+	}
+	.proj-vid {
+		width: 49%;
+	}
+	.skill-row {
+		
+	}
+	.skill-item {
+		width: 15%;
+	}
+	.excerpt {
+		width: 75%;
+	}
+	.home-img {
+		width: 80%;
+	}
 }
 @media screen and (min-width: 900px) {
     .column {
@@ -290,6 +332,9 @@ button {
 		float: left;
 		padding: 5px;
 	}
+	.home-img {
+		width: 45%;
+	}
 }
 @media screen and (min-width: 1440px) {
     .column {
@@ -303,6 +348,9 @@ button {
 		-webkit-perspective: 1000px;
 		float: left;
 		padding: 5px;
+	}
+	.home-img {
+		width: 45%;
 	}
 }
 .column {
@@ -345,7 +393,7 @@ p {
 .paragraph p {
     line-height: 25px;
 }
-h1 {
+h1, h3 {
     color: #FFFFFF;
     font-family: 'M PLUS Rounded 1c', Verdana;
 }
