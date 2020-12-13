@@ -1,0 +1,52 @@
+.spacer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.spacer-s {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.spacer-l {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.spacer-xl {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.container-fluid {
+    padding-left: 0;
+}
+.profilePic {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    min-height: calc(100vh - 56px);
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+}
+.shadow {
+    box-shadow: 4px 2px 2px rgba(55, 55, 55, 0.15);
+    border-radius: 10px;
+}
+.shadow-s {
+    box-shadow: -4px 2px 2px rgba(155, 155, 155, 0.35);
+    border-radius: 10px;
+}
+.bg-color {
+    background-color: #FDFDFD;
+    z-index: 1;
+}
+p {
+    font-weight: 100;
+    font-size: 1.5vw;
+}
+.body {
+    height: calc(100vh - 56px);
+    font-family: 'Roboto', sans-serif;
+}
+.backpad {
+    padding: 20px
+}
