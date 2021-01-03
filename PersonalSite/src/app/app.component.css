@@ -39,9 +39,20 @@
     background-color: #FDFDFD;
     z-index: 1;
 }
-p {
+p, a {
     font-weight: 100;
     font-size: 1.5vw;
+}
+a.nav-link {
+    color: grey;
+    transition: 0.25s ease;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+a.nav-link:hover {
+    color: black;
+    transition: 0.25s ease;
 }
 .body {
     height: calc(100vh - 56px);
@@ -49,4 +60,23 @@ p {
 }
 .backpad {
     padding: 20px
+}
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+.grow {
+    transition: 0.25s ease;
+    transform: scale(1.00);
+}
+.grow:hover {
+    transition: 0.25s ease;
+    transform: scale(1.025);
 }
